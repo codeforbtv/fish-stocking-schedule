@@ -32,16 +32,15 @@ path {
     /*opacity: 0.5;*/
 }
 
-.span2 .well {
+#species {
     margin-top: 20px;
     margin-left: 20px;
     padding: 10px 0;
 }
 
-.span4 .well {
+#infobox {
     margin-top: 20px;
     margin-right: 20px;
-    padding: 20px;
 }
 
 h2 {
