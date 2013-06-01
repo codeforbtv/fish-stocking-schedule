@@ -1,0 +1,362 @@
+town,zipcode,fema,parent
+Adamant,5640,,
+Addison,,512.11,Vergennes
+Albany,5820,2372.34,
+Alburgh,5440,,
+Andover,,31222.66,Chester
+Arlington,,154891.78,Arlington
+Arlington,5250,164502.21,TRUE
+Ascutney,5030,0,
+Athens,,27787.79,Chester
+Averill,5901,,
+Bakersfield,5441,,
+Barnard,5031,108980.28,
+Barnet,5821,3995.83,
+Barre,5641,35223.26,Barre
+Barre,5641,42464.49,TRUE
+Barton,5822,6450.03,
+Beecher Falls,5902,,
+Bellows Falls,,121627.26,Bellows Falls
+Bellows Falls,5101,124468.8,TRUE
+Belmont,5730,0,
+Belvidere Center,5442,,
+Bennington,,190121.71,Bennington
+Bennington,5201,290009.93,TRUE
+Benson,5731,3079.97,
+Berlin,,848168.23,Montpelier
+Bethel,5032,838387.53,
+Bolton,,21413.63,Waterbury
+Bomoseen,5732,7886.1,
+Bondville,,17540.08,Winhall
+Bradford,5033,2567.12,
+Braintree,,219835.35,Randolph
+Brandon,,114849.79,Brandon
+Brandon,5733,125140.13,TRUE
+Brattleboro,,665172.27,Brattleboro
+Brattleboro,5301,728549.47,TRUE
+Bridgewater,,57240.95,Bridgewater
+Bridgewater,5034,58776.95,TRUE
+Bridgewater Corners,5035,570164.83,
+Bridport,5734,0,
+Bristol,,6566.6,Bristol
+Bristol,5443,22329.63,TRUE
+Brookfield,5036,49979.98,
+Brookline,,38900.11,Newfane
+Brownsville,5037,54275.56,
+Burlington,5401,14273.31,
+Burlington,5405,,
+Burlington,5408,,
+Cabot,5647,8676.56,
+Calais,5648,,
+Cambridge,5444,10433.3,
+Cambridgeport,5141,8299.75,
+Canaan,5903,,
+Castleton,5735,29971.16,
+Cavendish,5142,208383.9,
+Center Rutland,5736,36967.47,
+Charlotte,5445,0,
+Chelsea,5038,0,
+Chester,,238095.18,Chester
+Chester,5143,297105.63,TRUE
+Chittenden,5737,5414.39,
+Clarendon,,787.52,Clarendon
+Clarendon,5759,132941.61,TRUE
+Colchester,5439,15955.2,
+Colchester,5446,,
+Concord,5824,1476.99,
+Corinth,5039,41661.65,
+Cornwall,,1415.34,Middlebury
+Coventry,5825,13790.62,
+Craftsbury,5826,,
+Craftsbury Common,5827,,
+Cuttingsville,,60426.91,Shrewsbury
+Danby,,59434.03,Danby
+Danby,5739,78986.7,TRUE
+Danville,5828,4995.7,
+Derby,5829,0,
+Derby Line,5830,0,
+Dorset,5251,6646.65,
+Dummerston,,0,Brattleboro
+Duxbury,,36274.57,Waterbury
+E Dummerston,,0,Putney
+East Arlington,5252,91619.35,
+East Barre,5649,16195.33,
+East Berkshire,5447,,
+East Burke,5832,,
+East Calais,5650,0,
+East Charleston,5833,0,
+East Corinth,5040,7376.54,
+East Dorset,5253,84576.35,
+East Dover,5341,114155.49,
+East Fairfield,5448,,
+East Granville,,0,Roxbury
+East Hardwick,5836,4265.78,
+East Haven,5837,,
+East Middlebury,5740,8977.63,
+East Montpelier,5651,40735.42,
+East Montpelier Center,,0,Montpelier
+East Randolph,5041,4500.51,
+East Roxbury,,0,Randolph
+East Ryegate,5042,,
+East Thetford,5043,,
+East Wallingford,5742,23164.26,
+Eden,5652,,
+Eden Mills,5653,,
+Enosburg Falls,5450,4080.48,
+Essex Junction,5452,0,
+Fairfax,5454,553.66,
+Fairfield,5455,0,
+Fairhaven,,51312.49,Fairhaven
+Fairhaven,5743,53778.41,TRUE
+Fairlee,5045,2358.5,
+Ferrisburgh,5456,,
+Florence,5744,36371.34,
+Forest Dale,5745,1660.2,
+Franklin,5457,,
+Gaysville,5746,21219.49,
+Gilman,5904,,
+Glover,5839,0,
+Goshen,,0,Brandon
+Grafton,5146,104839.34,
+Grand Isle,5458,,
+Graniteville,5654,1354.31,
+Granville,5747,118309.56,
+Greensboro,5841,,
+Greensboro Bend,5842,718.54,
+Groton,5046,43234.92,
+Guildhall,5905,,
+Guilford,,27050.28,Brattleboro
+Halifax,,1976.74,Brattleboro
+Hancock,5748,150818.06,
+Hardwick,5843,33926.48,
+Hartford,5047,41588.27,
+Hartland,5048,79658.5,
+Highgate Center,5459,,
+Hinesburg,5461,0,
+Huntington,5462,15684.39,
+Hyde Park,5655,5053.05,
+Ira,,1402.34,West Rutland
+Irasburg,5845,14475.79,
+Island Pond,5846,0,
+Isle La Motte,5463,,
+Jacksonville,5342,77523.6,
+Jamaica,5343,238451.16,
+Jay,,6059.88,North Troy
+Jeffersonville,5464,3198.62,
+Jericho,5465,160.73,
+Johnson,5656,2790.25,
+Jonesville,5466,23987.56,
+Killington,5751,108158.13,
+Lake Elmore,5657,2705.12,
+Leicester,,10290.34,Brandon
+Lincoln,,15763.03,Bristol
+Londonderry,5148,168334.13,
+Lowell,5847,2125.08,
+Ludlow,5149,602341.93,
+Lunenburg,5906,10846,
+Lyndon Center,5850,4914.89,
+Lyndonville,5851,107949.91,
+Manchester,5254,1525.7,
+Manchester Center,5255,143445.43,
+Marlboro,5344,170342.88,
+Marshfield,5658,58026.32,
+Mcindoe Falls,5050,,
+Mendon,,23911.25,Rutland
+Middlebury,,36430.33,Middlebury
+Middlebury,5753,37845.67,TRUE
+Middlesex,,47697.33,Montpelier
+Middletown Springs,5757,26710.79,
+Milton,5468,7097.39,
+Montgomery,5470,6138.54,
+Montgomery Center,5471,6915.08,
+Montpelier,,1195196.25,Montpelier
+Montpelier,5602,2091061.81,TRUE
+Moretown,5660,487321.94,
+Morgan,5853,,
+Morristown,5661,0,
+Mount Holly,5758,46834.16,
+Mount Tabor,,19552.67,Danby
+New Haven,5472,38261.05,
+Newbury,5051,7981.8,
+Newfane,,65079.02,Newfane
+Newfane,5345,347814.61,TRUE
+Newport,5855,0,
+Newport Center,5857,0,
+North Bennington,5257,106214.84,
+North Chittenden,,8982.69,Pittsford
+North Clarendon,,132154.09,Clarendon
+North Concord,5858,,
+North Ferrisburgh,5473,4475.68,
+North Hartland,5052,,
+North Hero,5474,,
+North Montpelier,5666,650.67,
+North Pomfret,5053,29075.19,
+North Pownal,5260,38171.96,
+North Springfield,5150,22490.41,
+North Troy,,2034.12,North Troy
+North Troy,5859,8094,TRUE
+Northfield,,909140.58,Northfield
+Northfield,5663,946392.39,TRUE
+Northfield Falls,5664,4868.28,
+Norton,5907,,
+Norwich,5055,24124.39,
+Orange,5641,7241.23,Barre
+Orleans,5860,2005.87,
+Orwell,5760,3212.76,
+Panton,,0,Vergennes
+Pawlet,5761,114482.35,
+Peacham,5862,7362.1,
+Perkinsville,5151,102156.73,
+Peru,5152,2058.05,
+Pittsfield,5762,255817.37,
+Pittsford,,29163.78,Pittsford
+Pittsford,5763,38146.47,TRUE
+Plainfield,5667,2110.49,
+Plymouth,5056,257756.93,
+Post Mills,5058,,
+Poultney,5764,52972.15,
+Pownal,5261,51785.07,
+Proctor,5765,49489.63,
+Proctorsville,5153,109825.11,
+Putney,,41499.89,Putney
+Putney,5346,41499.89,TRUE
+Quechee,5059,97416.22,
+Randolph,,396227.15,Randolph
+Randolph,5060,616062.5,TRUE
+Randolph Center,5061,810.8,
+Rawsonville,,0,South Londonderry
+Reading,,193499.98,Reading
+Reading,5062,219381.03,TRUE
+Readsboro,5350,66840.51,
+Richford,5476,59783.52,
+Richmond,5477,198531.31,
+Ripton,5766,5698.28,
+Rochester,5767,362745.41,
+Rockingham,,2841.54,Bellows Falls
+Roxbury,,256424.95,Roxbury
+Roxbury,5669,264873.99,TRUE
+Royalton,,39230.95,Royalton
+Rupert,5768,18106.13,
+Rutland,,633174.01,Rutland
+Rutland,5701,657085.26,TRUE
+Ryegate,,0,Rutland
+Saint Albans,5478,9637.46,
+Saint Albans Bay,5481,,
+Saint Johnsbury,5819,11687.63,
+Salisbury,5769,5127.48,
+Sandgate,,1901.48,Arlington
+Saxtons River,5154,97015.71,
+Searsburg,,5583.49,Wilmington
+Shaftsbury,5262,13895.56,
+Sharon,5065,530070.19,
+Sheffield,5866,9241.52,
+Shelburne,5482,784.71,
+Sheldon,5483,,
+Sheldon Springs,5485,,
+Shoreham,5770,0,
+Shrewsbury,,42528.72,Shrewsbury
+Shrewsbury,5738,102955.63,TRUE
+South Burlington,5403,413.75,
+South Hero,5486,,
+South Londonderry,,112681.21,South Londonderry
+South Londonderry,5155,114083.5,TRUE
+South Newfane,,243835.48,Newfane
+South Pomfret,5067,31007.28,
+South Reading,,25881.05,Reading
+South Royalton,,391137.14,Royalton
+South Royalton,5068,430368.09,TRUE
+South Ryegate,5069,68847.4,
+South Strafford,5070,45458.89,
+South Windham,,0,Windham
+South Woodstock,5071,8397.41,
+Springfield,5156,18933.85,
+Stamford,5352,8158.35,
+Starksboro,5487,0,
+Stockbridge,5772,537036.56,
+Stowe,5672,20377.83,
+Strafford,5072,30619.98,
+Stratton,,872.1,West Wardsboro
+Stratton Mountain,,1402.29,South Londonderry
+Sudbury,,0,Brandon
+Sunderland,,7708.95,Arlington
+Sutton,5867,7757.08,
+Swanton,5488,52.44,
+Taftsville,5073,1536,
+Thetford,5074,0,
+Thetford Center,5075,49702.85,
+Topsham,5076,6411.13,
+Townshend,5353,51767.86,
+Troy,5868,516.08,
+Tunbridge,5077,18786.27,
+Underhill,5489,6584.16,
+Underhill Center,5490,204.5,
+Vergennes,,1621.96,Vergennes
+Vergennes,5491,2134.07,TRUE
+Vernon,5354,23161,
+Vershire,5079,80066.3,
+W Berlin,,30200,Northfield
+W Braintree,,7390.43,Roxbury
+W Brattleboro,,2672.03,Brattleboro
+Waitsfield,5673,163042.27,
+Wallingford,5773,173764.04,
+Wardsboro,5355,120308.67,
+Warren,5674,121792.1,
+Washington,5675,5358.65,
+Waterbury,,2608373.19,Waterbury
+Waterbury,5676,2666061.39,TRUE
+Waterbury Center,5677,0,
+Waterville,5492,,
+Websterville,5678,0,
+Wells,5774,5152.65,
+Wells River,5081,3118.37,
+West Arlington,,0,Arlington
+West Berlin,,7051.81,Northfield
+West Braintree,,1058.61,Roxbury
+West Brattleboro,,31678.15,Brattleboro
+West Bridgewater,,1536,Bridgewater
+West Brookfield,,0,Randolph
+West Burke,5871,3544.8,
+West Charleston,5872,384.9,
+West Danville,5873,4726.13,
+West Dover,5356,55092.43,
+West Dummerston,5357,4176.31,
+West Fairlee,5083,41982.7,
+West Glover,5875,,
+West Halifax,5358,63023.76,
+West Hartford,5084,389958.04,
+West Haven,,2465.92,Fairhaven
+West Marlboro,,0,Wilmington
+West Pawlet,5775,31040.87,
+West Rupert,5776,9789.02,
+West Rutland,,106272.72,West Rutland
+West Rutland,5777,107675.06,TRUE
+West Topsham,5086,5445.05,
+West Townshend,,8303.7,Windham
+West Wardsboro,,33169.37,West Wardsboro
+West Wardsboro,5360,34041.47,TRUE
+West Windsor,5089,46903.37,
+Westfield,5874,0,
+Westford,5494,0,
+Westminster,5158,55701.82,
+Westminster Station,5159,4278,
+Westminster W,,0,Putney
+Weston,5161,14716.78,
+White River Junction,5001,231591.76,
+Whiting,5778,10228.46,
+Whitingham,5361,87752.22,
+Williamstown,5679,40397.46,
+Williamsville,5362,41892.7,
+Williston,5495,1896.94,
+Wilmington,,373365.91,Wilmington
+Wilmington,5363,378949.4,TRUE
+Windham,,1822.16,Windham
+Windham,5359,10125.86,TRUE
+Windsor,5089,77248.78,
+Winhall,,7354.88,Winhall
+Winhall,5340,24894.96,TRUE
+Winooski,5404,0,
+Wolcott,5680,22436.85,
+Woodbury,5681,2945.48,
+Woodford,,99888.22,Bennington
+Woodstock,5091,911605.61,
+Worcester,5682,18305.78,
