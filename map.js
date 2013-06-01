@@ -169,9 +169,10 @@ Fish.load_csv = function() {
 }
 
 Fish.init_species_menu = function() {
-    var menu = $('#species');
+    var menu = $('#species ul'),
+        species = menu.find('li');
 
-    menu.find('li').click(function() {
+    species.click(function() {
         $(this).parent().find('.active').removeClass('active');
         $(this).addClass('active');
 
