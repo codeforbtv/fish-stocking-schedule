@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+svg {
+    font: 10px sans-serif;
+    display: inline;
+}
+
+.key path {
+    display: none;
+}
+
+.key line {
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.key text {
+    font-size: 10px;
+}
+
+#map {
+    min-height: 600px;
+}
+
+path {
+    stroke: #999;
+    fill: #efefef;
+    shape-rendering: crispEdges;
+    cursor: pointer;
+    /*opacity: 0.5;*/
+}
+
+#species {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 0;
+}
+
+#infobox {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
