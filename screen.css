@@ -21,13 +21,29 @@ svg {
 }
 
 #map {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    min-height: 600px;
 }
 
 path {
     stroke: #999;
     fill: #efefef;
     shape-rendering: crispEdges;
+    cursor: pointer;
+    /*opacity: 0.5;*/
+}
+
+.span2 .well {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 0;
+}
+
+.span4 .well {
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
 }
