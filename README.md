@@ -1,5 +1,4 @@
-#fish-stocking-schedule
-======================
+#Fish Stocking Map
 
 This project will use the fish stocking schedule published by the Vermont Department of Fish and Wildlife to create a choropleth showing locations of fish stockings.
 
