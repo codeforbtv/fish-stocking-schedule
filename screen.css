@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+svg {
+    font: 10px sans-serif;
+    display: inline;
+}
+
+.key path {
+    display: none;
+}
+
+.key line {
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.key text {
+    font-size: 10px;
+}
+
+#map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+path {
+    stroke: #999;
+    fill: #efefef;
+    shape-rendering: crispEdges;
+}
