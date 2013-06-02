@@ -1,0 +1,464 @@
+town,parent,water,bkt,bkt-length,lat,lat-length,rbt,rbt-length,stt,stt-length,bnt,bnt-length,las,las-length,total
+Adamant,5640,,,,,,,,,,,,,,
+Albany,5820,,,,,,,,,,,,,,
+Alburgh,5440,,,,,,,,,,,,,,
+Arlington,5250,,,,,,,,,,,,,,
+Ascutney,5030,,,,,,,,,,,,,,
+Averill,Averill,Forest Lake,0,0,0,0,0,0,0,0,600,8.9,0,0,
+Averill,5901,MASTER,0,0,0,0,0,0,0,0,600,0,0,0,600
+Bakersfield,5441,,,,,,,,,,,,,,
+Barnard,5031,,,,,,,,,,,,,,
+Barnet,Barnet,Harvey's Lake,0,0,2000,8,1600,10.5,0,0,0,0,0,0,
+Barnet,Barnet,Joe's Brook,0,0,0,0,275,10.5,0,0,0,0,0,0,
+Barnet,Barnet,Stevens River,300,9.6,0,0,100,10.5,0,0,0,0,0,0,
+Barnet,5821,MASTER,300,0,2000,0,1975,0,0,0,0,0,0,0,4275
+Barre,5641,,,,,,,,,,,,,,
+Barton,Barton,May Pond,1000,9.6,0,0,0,0,0,0,0,0,0,0,
+Barton,5822,MASTER,1000,0,0,0,900,0,0,0,0,0,1000,0,2900
+Beecher Falls,5902,,,,,,,,,,,,,,
+Bellows Falls,5101,,,,,,,,,,,,,,
+Belmont,5730,,,,,,,,,,,,,,
+Belvidere,Belvidere,Calavale Brook,100,9,0,0,0,0,0,0,0,0,0,0,
+Belvidere,Belvidere,Lamoille River North Branch,0,0,0,0,0,0,0,0,400,8.9,0,0,
+Belvidere,5442,MASTER,100,0,0,0,0,0,0,0,400,0,0,0,500
+Bennington,Bennington,Bahen Brook/Daily Pond,400,9.7,0,0,0,0,0,0,0,0,0,0,
+Bennington,Bennington,Dewey Brook,200,9.7,0,0,0,0,0,0,0,0,0,0,
+Bennington,Bennington,Furnace Brook,250,0,0,0,0,0,0,0,0,0,0,0,
+Bennington,Bennington,Lake Paran,0,0,0,0,500,13.4,0,0,0,0,0,0,
+Bennington,Bennington,Walloomsac River,0,0,0,0,0,0,0,0,200,15.5,0,0,
+Bennington,Bennington,Walloomsac River South Stream,800,0,0,0,0,0,0,0,0,0,0,0,
+Bennington,5201,MASTER,4050,0,0,0,500,0,0,0,200,0,0,0,4750
+Benson,Benson,Sunset Lake,0,0,310,7.27,1000,10.9,0,0,0,0,0,0,
+Benson,5731,MASTER,0,0,310,0,1000,0,0,0,0,0,0,0,1310
+Bethel,Bethel,Ansel Pond,400,9.5,0,0,0,0,0,0,0,0,0,0,
+Bethel,5032,MASTER,400,0,0,0,0,0,0,0,0,0,0,0,400
+Bolton,Waterbury,Joiner Brook,500,9.1,0,0,0,0,0,0,0,0,0,0,
+Bomoseen,5732,,,,,,,,,,,,,,
+Bradford,5033,,,,,,,,,,,,,,
+Brandon,Brandon,Neshobe River,502,9,0,0,0,0,0,0,0,0,0,0,
+Brandon,5733,MASTER,2002,0,505,0,450,0,0,0,0,0,0,0,2957
+Brattleboro,5301,,,,,,,,,,,,,,
+Bridgewater,Bridgewater,Ottauquechee River,0,0,0,0,900,10.1,0,0,0,0,0,0,
+Bridgewater,5034,MASTER,0,0,0,0,900,0,0,0,0,0,0,0,900
+Bridgewater Corners,5035,,,,,,,,,,,,,,
+Bridport,5734,,,,,,,,,,,,,,
+Brighton,Brighton,Clyde River,300,9.6,0,0,0,0,0,0,0,0,0,0,
+Brighton,Brighton,Island Pond,0,0,0,0,1000,10,0,0,1500,9,0,0,
+Brighton,Brighton,Spectacle Pond,0,0,0,0,500,10,0,0,0,0,0,0,
+Brighton,5846,MASTER,300,0,0,0,1500,0,0,0,1500,0,0,0,3300
+Bristol,Bristol,Baldwin Creek,601,8.75,0,0,0,0,0,0,0,0,0,0,
+Bristol,Bristol,New Haven River Lower,0,0,0,0,750,10.1,0,0,0,0,0,0,
+Bristol,Bristol,Notch Brook,300,9.3,0,0,0,0,0,0,0,0,0,0,
+Bristol,5443,MASTER,1201,0,0,0,750,0,0,0,0,0,0,0,1951
+Brookfield,Brookfield,Rood Pond,900,9,0,0,0,0,0,0,0,0,0,0,
+Brookfield,Brookfield,Sunset Lake,800,9.6,0,0,225,17.4,0,0,0,0,0,0,
+Brookfield,5036,MASTER,1700,0,0,0,225,0,0,0,0,0,0,0,1925
+Brownsville,5037,,,,,,,,,,,,,,
+Burke,Burke,Passumpsic River East Branch,100,9.6,0,0,165,10.5,0,0,0,0,0,0,
+Burke,Burke,Passumpsic River West Branch,100,9.6,0,0,0,0,0,0,150,9.3,0,0,
+Burke,5871,MASTER,300,0,0,0,1605,0,0,0,150,0,0,0,2055
+Burlington,Burlington,Lake Champlain,0,0,25030,7.37,0,0,0,0,7700,8.8,0,0,
+Burlington,5408,MASTER,0,0,25030,0,0,0,0,0,7700,0,0,0,32730
+Cabot,5647,,,,,,,,,,,,,,
+Calais,Calais,Mirror Lake,0,0,0,0,700,10.2,0,0,0,0,0,0,
+Calais,Calais,Nelson Pond,0,0,0,0,350,10.2,0,0,150,8,0,0,
+Calais,5648,MASTER,0,0,0,0,1050,0,0,0,150,0,0,0,1200
+Cambridge,Cambridge,Lamoille River,0,0,0,0,500,10.5,0,0,0,0,0,0,
+Cambridge,Cambridge,Lamoille River North Branch,0,0,0,0,0,0,0,0,700,8.9,0,0,
+Cambridge,Cambridge,Seymour River,700,9.1,0,0,0,0,0,0,0,0,0,0,
+Cambridge,Cambridge,Sterling Pond,300,9.1,0,0,0,0,0,0,0,0,0,0,
+Cambridge,5444,MASTER,1000,0,0,0,500,0,0,0,700,0,0,0,2200
+Cambridgeport,5141,,,,,,,,,,,,,,
+Canaan,Canaan,Wallace Pond,0,0,0,0,0,0,0,0,2000,8.9,0,0,
+Canaan,5903,MASTER,0,0,0,0,0,0,0,0,2000,0,0,0,2000
+Castleton,Castleton,Glen Lake,0,0,0,0,1225,11.51020408,0,0,0,0,0,0,
+Castleton,Castleton,Lake Bomoseen,0,0,0,0,0,0,0,0,5000,8.7,0,0,
+Castleton,5735,MASTER,0,0,0,0,2025,0,0,0,5000,0,0,0,7025
+Cavendish,Cavendish,Black River,0,0,0,0,750,16,0,0,250,15.5,0,0,
+Cavendish,Cavendish,Knapp Pond No 1,0,0,0,0,2175,10.37356322,0,0,0,0,0,0,
+Cavendish,5142,MASTER,0,0,0,0,2925,0,0,0,250,0,0,0,3175
+Center Rutland,Center Rutland,Otter Creek,0,0,0,0,0,0,0,0,1500,9.6,0,0,
+Center Rutland,5736,MASTER,0,0,0,0,0,0,0,0,1500,0,0,0,1500
+Charleston,Charleston,Clyde River,0,0,0,0,0,0,0,0,0,0,23023,0,
+Charleston,Charleston,Echo Lake,0,0,0,0,1000,10,0,0,0,0,0,0,
+Charleston,5872,MASTER,0,0,0,0,1000,0,0,0,0,0,23023,0,24023
+Charlotte,Charlotte,Lake Champlain,0,0,12685,7.42,0,0,0,0,0,0,13920,7.55109842,
+Charlotte,5445,MASTER,0,0,12685,0,0,0,0,0,0,0,13920,0,26605
+Chelsea,Chelsea,White River First Branch,350,9.1,0,0,0,0,0,0,0,0,0,0,
+Chelsea,5038,MASTER,350,0,0,0,0,0,0,0,0,0,0,0,350
+Chester,5143,,,,,,,,,,,,,,
+Chittenden,Chittenden,East Creek,0,0,0,0,250,12.1,0,0,0,0,0,0,
+Chittenden,5737,MASTER,0,0,0,0,250,0,0,0,0,0,0,0,250
+Clarendon,Clarendon,Clarendon River,516,9,0,0,0,0,0,0,0,0,0,0,
+Clarendon,Clarendon,Cold River Lower,0,0,0,0,0,0,0,0,500,9,0,0,
+Clarendon,Clarendon,Otter Creek,0,0,0,0,0,0,0,0,500,9.6,0,0,
+Clarendon,5759,MASTER,516,0,0,0,0,0,0,0,1000,0,0,0,1516
+Colchester,Colchester,Lake Champlain,0,0,0,0,0,0,10000,7.41,10200,8.8,2370,7.65,
+Colchester,5446,MASTER,0,0,0,0,0,0,10000,0,10200,0,2370,0,22570
+Concord,5824,,,,,,,,,,,,,,
+Corinth,5039,,,,,,,,,,,,,,
+Coventry,Coventry,Black River,0,0,0,0,0,0,4600,7.3,0,0,0,0,
+Coventry,5825,MASTER,0,0,0,0,0,0,4600,0,0,0,0,0,4600
+Craftsbury,Craftsbury,Black River,0,0,0,0,0,0,7000,0,300,8.9,0,0,
+Craftsbury,5826,MASTER,0,0,0,0,0,0,7000,0,300,0,0,0,7300
+Craftsbury Common,5827,,,,,,,,,,,,,,
+Danby,Danby,Otter Creek,0,0,0,0,250,16,0,0,250,15.1,0,0,
+Danby,5739,MASTER,0,0,0,0,500,0,0,0,500,0,0,0,1000
+Danville,Danville,Joe's Brook,300,9.1,0,0,275,10.5,0,0,0,0,0,0,
+Danville,Danville,Joe's Pond,0,0,0,0,660,10.5,0,0,1100,9,0,0,
+Danville,5828,MASTER,300,0,0,0,935,0,0,0,1100,0,0,0,2335
+Derby,Derby,Clyde River,0,0,0,0,0,0,0,0,0,0,23023,0,
+Derby,5829,MASTER,0,0,0,0,0,0,0,0,0,0,23023,0,23023
+Dorset,Dorset,Prentiss Pond,500,9.7,0,0,0,0,0,0,0,0,0,0,
+Dorset,5251,MASTER,500,0,0,0,0,0,0,0,0,0,0,0,500
+Duxbury,Waterbury,Ridley Brook,500,9.1,0,0,0,0,0,0,0,0,0,0,
+Duxbury,Waterbury,Winooski River,0,0,0,0,500,16,0,0,175,17,0,0,
+East Arlington,5252,,,,,,,,,,,,,,
+East Barre,5649,,,,,,,,,,,,,,
+East Berkshire,5447,,,,,,,,,,,,,,
+East Burke,5832,,,,,,,,,,,,,,
+East Calais,5650,,,,,,,,,,,,,,
+East Charleston,5833,,,,,,,,,,,,,,
+East Corinth,5040,,,,,,,,,,,,,,
+East Dorset,5253,,,,,,,,,,,,,,
+East Dover,5341,,,,,,,,,,,,,,
+East Fairfield,5448,,,,,,,,,,,,,,
+East Hardwick,5836,,,,,,,,,,,,,,
+East Haven,5837,,,,,,,,,,,,,,
+East Middlebury,5740,,,,,,,,,,,,,,
+East Montpelier,5651,,,,,,,,,,,,,,
+East Randolph,5041,,,,,,,,,,,,,,
+East Thetford,5043,,,,,,,,,,,,,,
+East Wallingford,5742,,,,,,,,,,,,,,
+Eden,Eden,Gihon River,500,9,0,0,0,0,0,0,650,8.9,0,0,
+Eden,5652,MASTER,500,0,0,0,0,0,0,0,650,0,0,0,1150
+Eden Mills,5653,,,,,,,,,,,,,,
+Enosburg,Enosburg,Mississquoi River,0,0,0,0,1000,16,0,0,0,0,0,0,
+Enosburg,5450,MASTER,0,0,0,0,1000,0,0,0,0,0,0,0,1000
+Essex Junction,5452,,,,,,,,,,,,,,
+Fair Haven,Fair Haven,Glen Lake,0,0,0,0,1225,11.51020408,0,0,0,0,0,0,
+Fair Haven,5743,MASTER,0,0,0,0,1225,0,0,0,0,0,0,0,1225
+Fairfax,Fairfax,Lamoille River,0,0,0,0,0,0,0,0,800,14.2,0,0,
+Fairfax,5454,MASTER,0,0,0,0,0,0,0,0,800,0,0,0,800
+Fairfield,5455,,,,,,,,,,,,,,
+Fairlee,Fairlee,Lake Fairlee,0,0,0,0,900,10.2,0,0,1500,8,0,0,
+Fairlee,5045,MASTER,0,0,0,0,900,0,0,0,1500,0,0,0,2400
+Ferrisburgh,Ferrisburgh,Lake Champlain,0,0,5002,7.403986405,0,0,17328,7.477606764,7700,8.64,18726,7.46381288,
+Ferrisburgh,5456,MASTER,0,0,5002,0,0,0,17328,0,7700,0,18726,0,48756
+Florence,5744,,,,,,,,,,,,,,
+Forest Dale,5745,,,,,,,,,,,,,,
+Franklin,5457,,,,,,,,,,,,,,
+Gaysville,5746,,,,,,,,,,,,,,
+Georgia,Milton,Lake Champlain,0,0,0,0,0,0,5144,7.364906687,0,0,0,0,
+Gilman,5904,,,,,,,,,,,,,,
+Glover,Glover,Shadow Lake,0,0,600,8,0,0,0,0,0,0,0,0,
+Glover,5839,MASTER,0,0,600,0,0,0,0,0,0,0,0,0,600
+Goshen,Brandon,Goshen Dam,1000,8.98,0,0,0,0,0,0,0,0,0,0,
+Grafton,5146,,,,,,,,,,,,,,
+Grand Isle,Grand Isle,Lake Champlain,0,0,14317,7.42,0,0,12000,7.41,10457,8.666662523,17000,7.339255294,
+Grand Isle,5458,MASTER,0,0,14317,0,0,0,12000,0,10457,0,17000,0,53774
+Graniteville,5654,,,,,,,,,,,,,,
+Granville,5747,,,,,,,,,,,,,,
+Greensboro,Greensboro,Lake Elligo,0,0,0,0,1000,10.2,0,0,0,0,0,0,
+Greensboro,5841,MASTER,0,0,0,0,1000,0,0,0,0,0,0,0,1000
+Greensboro Bend,5842,,,,,,,,,,,,,,
+Groton,Groton,Levi Pond,100,9.1,0,0,0,0,0,0,0,0,0,0,
+Groton,Groton,Wells River,250,9.6,0,0,0,0,0,0,0,0,0,0,
+Groton,5046,MASTER,350,0,0,0,0,0,0,0,0,0,0,0,350
+Guildhall,5905,,,,,,,,,,,,,,
+Hancock,5748,,,,,,,,,,,,,,
+Hardwick,Hardwick,Mackville Pond,0,0,0,0,200,10,0,0,0,0,0,0,
+Hardwick,5843,MASTER,0,0,0,0,200,0,0,0,0,0,0,0,200
+Hartford,Hartford,White River,0,0,0,0,2200,10.5,0,0,0,0,0,0,
+Hartford,5047,MASTER,0,0,0,0,2200,0,0,0,0,0,0,0,2200
+Hartland,Hartland,Lulls Brook,200,9.1,0,0,0,0,0,0,0,0,0,0,
+Hartland,5048,MASTER,200,0,0,0,0,0,0,0,0,0,0,0,200
+Highgate Center,5459,,,,,,,,,,,,,,
+Hinesburg,5461,,,,,,,,,,,,,,
+Holland,Holland,Holland Pond,0,0,0,0,1200,10,0,0,1100,9,0,0,
+Holland,5830,MASTER,0,0,0,0,1200,0,0,0,1100,0,0,0,2300
+Hubbardton,Castleton,Black Pond,0,0,0,0,800,11.675,0,0,0,0,0,0,
+Huntington,Huntington,Huntington River,1200,9.38,0,0,0,0,0,0,0,0,0,0,
+Huntington,5462,MASTER,1200,0,0,0,0,0,0,0,0,0,0,0,1200
+Hyde Park,Hyde Park,Gihon River,500,9,0,0,0,0,0,0,650,8.9,0,0,
+Hyde Park,Hyde Park,Lamoille River,0,0,0,0,400,10.5,0,0,0,0,0,0,
+Hyde Park,Hyde Park,Zack Woods-Perch Ponds,150,9.1,0,0,0,0,0,0,0,0,0,0,
+Hyde Park,5655,MASTER,650,0,0,0,400,0,0,0,650,0,0,0,1700
+Ira,West Rutland,Castleton River,200,9,0,0,0,0,0,0,0,0,0,0,
+Irasburg,Irasburg,Black River,0,0,0,0,0,0,0,0,300,8.9,0,0,
+Irasburg,5845,MASTER,0,0,0,0,0,0,0,0,300,0,0,0,300
+Isle La Motte,5463,,,,,,,,,,,,,,
+Jacksonville,5342,,,,,,,,,,,,,,
+Jamaica,Jamaica,West River,0,0,0,0,500,10.5,0,0,0,0,0,0,
+Jamaica,5343,MASTER,0,0,0,0,500,0,0,0,0,0,0,0,500
+Jeffersonville,Jeffersonville,Brewster River,600,9.1,0,0,0,0,0,0,0,0,0,0,
+Jeffersonville,5464,MASTER,600,0,0,0,0,0,0,0,0,0,0,0,600
+Jericho,Jericho,Browns River,900,9.1,0,0,0,0,0,0,0,0,0,0,
+Jericho,5465,MASTER,900,0,0,0,0,0,0,0,0,0,0,0,900
+Johnson,Johnson,Lamoille River,0,0,0,0,2300,10.5,0,0,0,0,0,0,
+Johnson,5656,MASTER,0,0,0,0,2300,0,0,0,0,0,0,0,2300
+Jonesville,5466,,,,,,,,,,,,,,
+Killington,Killington,Colton Pond,1000,9.5,0,0,0,0,0,0,0,0,0,0,
+Killington,Killington,Kent Pond,500,9.7,0,0,1500,12.6,0,0,0,0,0,0,
+Killington,5751,MASTER,1500,0,0,0,1500,0,0,0,0,0,0,0,3000
+Lake Elmore,5657,,,,,,,,,,,,,,
+Leicester,Brandon,Lake Dunmore,0,0,505,7.27,450,10.4,0,0,0,0,0,0,
+Leicester,Brandon,Silver Lake,500,8.98,0,0,0,0,0,0,0,0,0,0,
+Lincoln,Bristol,New Haven River Upper,300,9.1,0,0,0,0,0,0,0,0,0,0,
+Londonderry,5148,,,,,,,,,,,,,,
+Lowell,5847,,,,,,,,,,,,,,
+Ludlow,Ludlow,Lake Rescue,0,0,100,8,1400,12.07142857,0,0,600,9,0,0,
+Ludlow,5149,MASTER,0,0,100,0,1400,0,0,0,600,0,0,0,2100
+Lunenburg,5906,,,,,,,,,,,,,,
+Lyndon,Lyndon,Millers Run,50,9.6,0,0,770,10.5,0,0,0,0,0,0,
+Lyndon,Lyndon,Passumpsic River,0,0,0,0,550,10.5,0,0,700,9.3,0,0,
+Lyndon,Lyndon,Passumpsic River East Branch,0,0,0,0,165,10.5,0,0,0,0,0,0,
+Lyndon,Lyndon,Passumpsic River West Branch,100,9.6,0,0,0,0,0,0,150,9.3,0,0,
+Lyndon,5851,MASTER,150,0,0,0,935,0,0,0,150,0,0,0,1235
+Lyndon,5851,MASTER,0,0,0,0,550,0,0,0,700,0,0,0,1250
+Lyndon Center,5850,,,,,,,,,,,,,,
+Manchester,Manchester,Bullhead Pond,800,8.7,0,0,0,0,0,0,0,0,0,0,
+Manchester,5255,MASTER,800,0,0,0,0,0,0,0,0,0,0,0,800
+Manchester Center,5254,,,,,,,,,,,,,,
+Marlboro,Marlboro,South Pond,0,0,0,0,1600,10,0,0,100,9,0,0,
+Marlboro,5344,MASTER,0,0,0,0,1600,0,0,0,100,0,0,0,1700
+Marshfield,Marshfield,Marshfield Reservoir,0,0,0,0,1200,10,0,0,500,8,0,0,
+Marshfield,Marshfield,Winooski River,250,9.1,0,0,0,0,0,0,0,0,0,0,
+Marshfield,5658,MASTER,250,0,0,0,1200,0,0,0,500,0,0,0,1950
+Mcindoe Falls,5050,,,,,,,,,,,,,,
+Middlebury,5753,,,,,,,,,,,,,,
+Middletown Springs,5757,,,,,,,,,,,,,,
+Milton,Milton,Lake Champlain,0,0,0,0,0,0,0,0,4400,8.71,26999,7.42628764,
+Milton,5468,MASTER,0,0,0,0,0,0,5144,0,4400,0,26999,0,36543
+Montgomery,5470,,,,,,,,,,,,,,
+Montgomery Center,5471,,,,,,,,,,,,,,
+Montpelier,5602,,,,,,,,,,,,,,
+Moretown,5660,,,,,,,,,,,,,,
+Morgan,Morgan,Seymour Lake,0,0,0,0,0,0,0,0,0,0,2000,7.1,
+Morgan,5853,MASTER,0,0,0,0,0,0,0,0,0,0,2000,0,2000
+Morristown,Morristown,Lamoille River,0,0,0,0,400,10.5,0,0,0,0,0,0,
+Morristown,5661,MASTER,0,0,0,0,400,0,0,0,0,0,0,0,400
+Mount Holly,Mount Holly,Mill River,252,9,0,0,0,0,0,0,0,0,0,0,
+Mount Holly,5758,MASTER,252,0,0,0,0,0,0,0,0,0,0,0,252
+Mount Tabor,Danby,Otter Creek,0,0,0,0,250,16,0,0,250,15.1,0,0,
+New Haven,New Haven,New Haven River Lower,0,0,0,0,750,10.1,0,0,2000,9,0,0,
+New Haven,5472,MASTER,0,0,0,0,750,0,0,0,2000,0,0,0,2750
+Newark,Burke,Newark Pond,0,0,0,0,1440,10.5,0,0,0,0,0,0,
+Newark,Burke,Passumpsic River East Branch,100,9.6,0,0,0,0,0,0,0,0,0,0,
+Newbury,5051,,,,,,,,,,,,,,
+Newfane,5345,,,,,,,,,,,,,,
+Newport,Newport,Lake Memphremagog,0,0,0,0,0,0,0,0,0,0,30000,7.1,
+Newport,5855,MASTER,0,0,0,0,0,0,0,0,0,0,30000,0,30000
+Newport Center,5857,,,,,,,,,,,,,,
+North Bennington,5257,,,,,,,,,,,,,,
+North Concord,5858,,,,,,,,,,,,,,
+North Ferrisburgh,5473,,,,,,,,,,,,,,
+North Hartland,5052,,,,,,,,,,,,,,
+North Hero,North Hero,Lake Champlain,0,0,0,0,0,0,0,0,4400,8.71,7000,7.617594286,
+North Hero,5474,MASTER,0,0,0,0,0,0,0,0,4400,0,7000,0,11400
+North Montpelier,5666,,,,,,,,,,,,,,
+North Pomfret,5053,,,,,,,,,,,,,,
+North Pownal,5260,,,,,,,,,,,,,,
+North Springfield,5150,,,,,,,,,,,,,,
+North Troy,5859,,,,,,,,,,,,,,
+Northfield,5663,,,,,,,,,,,,,,
+Northfield Falls,5664,,,,,,,,,,,,,,
+Norton,5907,,,,,,,,,,,,,,
+Norwich,5055,,,,,,,,,,,,,,
+Orange,5641,,,,,,,,,,,,,,
+Orleans,5860,,,,,,,,,,,,,,
+Orwell,5760,,,,,,,,,,,,,,
+Pawlet,5761,,,,,,,,,,,,,,
+Peacham,Peacham,Martin's Pond,800,9.1,0,0,0,0,0,0,0,0,0,0,
+Peacham,5862,MASTER,800,0,0,0,0,0,0,0,0,0,0,0,800
+Peru,5152,,,,,,,,,,,,,,
+Pittsfield,5762,,,,,,,,,,,,,,
+Pittsford,Pittsford,Smith Pond,658,9.425531915,0,0,0,0,0,0,0,0,0,0,
+Pittsford,5763,MASTER,658,0,0,0,0,0,0,0,0,0,0,0,658
+Plainfield,Plainfield,Winooski River,250,9.1,0,0,0,0,0,0,0,0,0,0,
+Plainfield,5667,MASTER,250,0,0,0,0,0,0,0,0,0,0,0,250
+Plymouth,Plymouth,Amherst Lake,0,0,100,8,1200,13.775,0,0,0,0,0,0,
+Plymouth,Plymouth,Echo Lake,0,0,100,8,1500,13.3,0,0,0,0,0,0,
+Plymouth,Plymouth,Woodward Reservoir,0,0,0,0,990,10.5,0,0,550,9,0,0,
+Plymouth,5056,MASTER,0,0,200,0,3690,0,0,0,550,0,0,0,4440
+Post Mills,5058,,,,,,,,,,,,,,
+Poultney,Poultney,Lake St Catherine,0,0,0,0,670,10.6,0,0,5000,9,0,0,
+Poultney,Poultney,Poultney River,1008,9,0,0,0,0,0,0,0,0,0,0,
+Poultney,5764,MASTER,1008,0,0,0,670,0,0,0,5000,0,0,0,6678
+Pownal,Pownal,Hoosic River Lower,0,0,0,0,0,0,0,0,600,9.2,0,0,
+Pownal,5261,MASTER,0,0,0,0,0,0,0,0,600,0,0,0,600
+Proctor,Proctor,Otter Creek,0,0,0,0,0,0,0,0,1000,9.6,0,0,
+Proctor,5765,MASTER,0,0,0,0,0,0,0,0,1000,0,0,0,1000
+Proctorsville,5153,,,,,,,,,,,,,,
+Putney,5346,,,,,,,,,,,,,,
+Quechee,5059,,,,,,,,,,,,,,
+Randolph,Randolph,White River Third Branch,500,9.1,0,0,0,0,0,0,0,0,0,0,
+Randolph,5060,MASTER,500,0,0,0,0,0,0,0,0,0,0,0,500
+Randolph Center,5061,,,,,,,,,,,,,,
+Reading,Reading,Knapp Pond No 1,0,0,0,0,2175,10.37356322,0,0,0,0,0,0,
+Reading,5062,MASTER,0,0,0,0,2175,0,0,0,0,0,0,0,2175
+Readsboro,5350,,,,,,,,,,,,,,
+Richford,5476,,,,,,,,,,,,,,
+Richmond,5477,,,,,,,,,,,,,,
+Ripton,Ripton,Middlebury River Upper,500,9.1,0,0,0,0,0,0,0,0,0,0,
+Ripton,5766,MASTER,500,0,0,0,0,0,0,0,0,0,0,0,500
+Rochester,5767,,,,,,,,,,,,,,
+Roxbury,Roxbury,White River Third Branch,500,9.1,0,0,0,0,0,0,0,0,0,0,
+Roxbury,5669,MASTER,500,0,0,0,0,0,0,0,0,0,0,0,500
+Royalton,Royalton,McIntosh Pond,700,9.1,0,0,800,12.175,0,0,0,0,0,0,
+Royalton,Royalton,White River,0,0,0,0,1100,10.5,0,0,0,0,0,0,
+Royalton,5068,MASTER,700,0,0,0,1900,0,0,0,0,0,0,0,2600
+Rupert,5768,,,,,,,,,,,,,,
+Rutland,Rutland,East Creek,0,0,0,0,1500,15.35,0,0,0,0,0,0,
+Rutland,5701,MASTER,0,0,0,0,1500,0,0,0,0,0,0,0,1500
+Ryegate,Ryegate,Wells River,250,9.6,0,0,0,0,0,0,0,0,0,0,
+Ryegate,5042,MASTER,250,0,0,0,0,0,0,0,0,0,0,0,250
+Saint Albans,Saint Albans,Lake Champlain,0,0,0,0,0,0,0,0,4400,8.71,7700,7.71,
+Saint Albans,5478,MASTER,0,0,0,0,0,0,0,0,4400,0,7700,0,12100
+Saint Albans Bay,5481,,,,,,,,,,,,,,
+Saint Johnsbury,Saint Johnsbury,Passumpsic River,0,0,0,0,500,16,0,0,500,15.1,0,0,
+Saint Johnsbury,Saint Johnsbury,Passumpsic River,0,0,0,0,550,10.5,0,0,700,9.3,0,0,
+Saint Johnsbury,Saint Johnsbury,Sleepers River,0,0,0,0,100,10.5,0,0,125,9.3,0,0,
+Saint Johnsbury,5819,MASTER,0,0,0,0,600,0,0,0,625,0,0,0,1225
+Saint Johnsbury,5819,MASTER,0,0,0,0,550,0,0,0,700,0,0,0,1250
+Salisbury,Salisbury,Lake Dunmore,0,0,505,7.27,450,10.4,0,0,0,0,0,0,
+Salisbury,5769,MASTER,0,0,505,0,450,0,0,0,0,0,0,0,955
+Saxtons River,5154,,,,,,,,,,,,,,
+Shaftsbury,Shaftsbury,Big Cold Spring Brook,500,0,0,0,0,0,0,0,0,0,0,0,
+Shaftsbury,Shaftsbury,Furnace Brook,250,0,0,0,0,0,0,0,0,0,0,0,
+Shaftsbury,Shaftsbury,Lake Paran,0,0,0,0,500,13.4,0,0,0,0,0,0,
+Shaftsbury,Shaftsbury,Lake Shaftsbury,0,0,0,0,300,15.8,0,0,0,0,0,0,
+Shaftsbury,Shaftsbury,Shaftsbury Hollow Brook,400,0,0,0,0,0,0,0,0,0,0,0,
+Shaftsbury,5262,MASTER,1150,0,0,0,800,0,0,0,0,0,0,0,1950
+Sharon,Sharon,White River,0,0,0,0,3300,10.5,0,0,0,0,0,0,
+Sharon,5065,MASTER,0,0,0,0,3300,0,0,0,0,0,0,0,3300
+Sheffield,Sheffield,Millers Run,50,9.6,0,0,0,0,0,0,0,0,0,0,
+Sheffield,5866,MASTER,50,0,0,0,0,0,0,0,0,0,0,0,50
+Shelburne,Shelburne,Lake Champlain,0,0,0,0,0,0,3000,7.41,0,0,4872,7.75,
+Shelburne,5482,MASTER,0,0,0,0,0,0,3000,0,0,0,4872,0,7872
+Sheldon Springs,5485,,,,,,,,,,,,,,
+Shoreham,5770,,,,,,,,,,,,,,
+Shrewsbury,Shrewsbury,Cold River,570,9.1,0,0,0,0,0,0,0,0,0,0,
+Shrewsbury,Shrewsbury,Cold River Lower,0,0,0,0,0,0,0,0,500,9,0,0,
+Shrewsbury,Shrewsbury,Freeman Creek,505,9,0,0,0,0,0,0,0,0,0,0,
+Shrewsbury,Shrewsbury,Mill River,252,9,0,0,0,0,0,0,0,0,0,0,
+Shrewsbury,Shrewsbury,Mill River Mid,0,0,0,0,550,12.1,0,0,0,0,0,0,
+Shrewsbury,Shrewsbury,Spring Lake,502,9,303,8,0,0,0,0,0,0,0,0,
+Shrewsbury,5738,MASTER,1829,0,303,0,550,0,0,0,500,0,0,0,3182
+Somerset,5360,,,,,,,,,,,,,,
+South Burlington,5403,,,,,,,,,,,,,,
+South Hero,South Hero,Lake Champlain,0,0,0,0,0,0,0,0,4400,8.64,7000,7.374367143,
+South Hero,5486,MASTER,0,0,0,0,0,0,0,0,4400,0,7000,0,11400
+South Londonderry,5155,,,,,,,,,,,,,,
+South Pomfret,5067,,,,,,,,,,,,,,
+South Ryegate,5069,,,,,,,,,,,,,,
+South Strafford,5070,,,,,,,,,,,,,,
+South Woodstock,5071,,,,,,,,,,,,,,
+Springfield,5156,,,,,,,,,,,,,,
+Stamford,Stamford,Hoosic River North Branch,0,0,0,0,0,0,0,0,1900,9,0,0,
+Stamford,5352,MASTER,0,0,0,0,0,0,0,0,1900,0,0,0,1900
+Starksboro,Starksboro,Lewis Creek,700,9.1,0,0,0,0,0,0,0,0,0,0,
+Starksboro,5487,MASTER,700,0,0,0,0,0,0,0,0,0,0,0,700
+Stockbridge,Stockbridge,White River,0,0,0,0,1700,10.5,0,0,0,0,0,0,
+Stockbridge,5772,MASTER,0,0,0,0,1700,0,0,0,0,0,0,0,1700
+Stowe,Stowe,Sterling Pond,300,9.1,0,0,0,0,0,0,0,0,0,0,
+Stowe,Stowe,Waterbury Reservoir,0,0,0,0,750,10,0,0,1000,9,0,0,
+Stowe,5672,MASTER,300,0,0,0,750,0,0,0,1000,0,0,0,2050
+Strafford,Strafford,Miller Pond,800,9.6,0,0,1100,16.5,0,0,0,0,0,0,
+Strafford,Strafford,Ompompanoosuc River West Branch,400,9.1,0,0,0,0,0,0,0,0,0,0,
+Strafford,5072,MASTER,1200,0,0,0,1100,0,0,0,0,0,0,0,2300
+Sutton,5867,,,,,,,,,,,,,,
+Swanton,Swanton,Lake Champlain,0,0,0,0,0,0,0,0,0,0,20000,7.347065,
+Swanton,5488,MASTER,0,0,0,0,0,0,0,0,0,0,20000,0,20000
+Taftsville,5073,,,,,,,,,,,,,,
+Thetford,5074,,,,,,,,,,,,,,
+Thetford Center,5075,,,,,,,,,,,,,,
+Topsham,5076,,,,,,,,,,,,,,
+Townshend,5353,,,,,,,,,,,,,,
+Troy,5868,,,,,,,,,,,,,,
+Tunbridge,Tunbridge,White River First Branch,350,9.1,0,0,0,0,0,0,0,0,0,0,
+Tunbridge,5077,MASTER,350,0,0,0,0,0,0,0,0,0,0,0,350
+Underhill,Underhill,Browns River,900,9.1,0,0,0,0,0,0,0,0,0,0,
+Underhill,5489,MASTER,900,0,0,0,0,0,0,0,0,0,0,0,900
+Underhill Center,5490,,,,,,,,,,,,,,
+Vergennes,5491,,,,,,,,,,,,,,
+Vernon,Vernon,Vernon Hatchery Pond,700,8.7,0,0,0,0,0,0,100,8,0,0,
+Vernon,5354,MASTER,700,0,0,0,0,0,0,0,100,0,0,0,800
+Vershire,5079,,,,,,,,,,,,,,
+Waitsfield,Waitsfield,Mad River,300,9.7,0,0,0,0,0,0,0,0,0,0,
+Waitsfield,5673,MASTER,300,0,0,0,0,0,0,0,0,0,0,0,300
+Wallingford,Wallingford,Otter Creek,0,0,0,0,750,12.1,0,0,0,0,0,0,
+Wallingford,5773,MASTER,0,0,0,0,750,0,0,0,0,0,0,0,750
+Wardsboro,5355,,,,,,,,,,,,,,
+Warren,Warren,Blueberry Lake,400,9.7,0,0,0,0,0,0,0,0,0,0,
+Warren,Warren,Mad River,300,9.7,0,0,0,0,0,0,0,0,0,0,
+Warren,5674,MASTER,700,0,0,0,0,0,0,0,0,0,0,0,700
+Washington,5675,,,,,,,,,,,,,,
+Waterbury,Waterbury,Waterbury Reservoir,0,0,0,0,750,10,0,0,1000,9,0,0,
+Waterbury,Waterbury,Winooski River,0,0,0,0,500,16,0,0,175,17,0,0,
+Waterbury,5676,MASTER,1000,0,0,0,1750,0,0,0,1350,0,0,0,4100
+Waterbury Center,5677,,,,,,,,,,,,,,
+Waterville,Waterville,Lamoille River North Branch,0,0,0,0,0,0,0,0,700,8.9,0,0,
+Waterville,5492,MASTER,0,0,0,0,0,0,0,0,700,0,0,0,700
+Weathersfield,Weathersfield,Black River,0,0,0,0,750,16,0,0,250,15.5,0,0,
+Weathersfield,Weathersfield,Stoughton Pond,0,0,0,0,510,16,0,0,0,0,0,0,
+Weathersfield,5151,MASTER,0,0,0,0,1260,0,0,0,250,0,0,0,1510
+Websterville,5678,,,,,,,,,,,,,,
+Wells,5774,,,,,,,,,,,,,,
+Wells River,5081,,,,,,,,,,,,,,
+West Danville,5873,,,,,,,,,,,,,,
+West Dover,5356,,,,,,,,,,,,,,
+West Dummerston,5357,,,,,,,,,,,,,,
+West Fairlee,5083,,,,,,,,,,,,,,
+West Glover,5875,,,,,,,,,,,,,,
+West Halifax,5358,,,,,,,,,,,,,,
+West Hartford,5084,,,,,,,,,,,,,,
+West Pawlet,5775,,,,,,,,,,,,,,
+West Rupert,5776,,,,,,,,,,,,,,
+West Rutland,West Rutland,Castleton River,200,9,0,0,0,0,0,0,0,0,0,0,
+West Rutland,West Rutland,Whipple Hollow Brook,426,9.69,0,0,0,0,0,0,0,0,0,0,
+West Rutland,5777,MASTER,826,0,0,0,0,0,0,0,0,0,0,0,826
+West Topsham,5086,,,,,,,,,,,,,,
+West Windsor,West Windsor,Mill Brook,100,9.1,0,0,0,0,0,0,0,0,0,0,
+West Windsor,5089,MASTER,100,0,0,0,0,0,0,0,0,0,0,0,100
+Westfield,5874,,,,,,,,,,,,,,
+Westford,5494,,,,,,,,,,,,,,
+Westminster,5158,,,,,,,,,,,,,,
+Westminster Station,5159,,,,,,,,,,,,,,
+Westmore,Barton,Bald Hill Pond,0,0,0,0,900,10.5,0,0,0,0,0,0,
+Westmore,Barton,Lake Willoughby,0,0,0,0,0,0,0,0,0,0,1000,7.1,
+Weston,5161,,,,,,,,,,,,,,
+White River Junction,5001,,,,,,,,,,,,,,
+Whiting,5778,,,,,,,,,,,,,,
+Whitingham,Whitingham,Harriman Reservoir,0,0,500,8,450,10,0,0,1850,9,0,0,
+Whitingham,Whitingham,Sherman Reservoir,0,0,0,0,0,0,0,0,1200,8,0,0,
+Whitingham,5361,MASTER,0,0,500,0,450,0,0,0,3050,0,0,0,4000
+Williamstown,Williamstown,Rood Pond,900,9,0,0,0,0,0,0,0,0,0,0,
+Williamstown,5679,MASTER,900,0,0,0,0,0,0,0,0,0,0,0,900
+Williamsville,5362,,,,,,,,,,,,,,
+Williston,5495,,,,,,,,,,,,,,
+Wilmington,Wilmington,Harriman Reservoir,0,0,500,8,450,10,0,0,1850,9,0,0,
+Wilmington,Wilmington,Lake Raponda,0,0,0,0,700,15.8,0,0,0,0,0,0,
+Wilmington,5363,MASTER,0,0,500,0,1150,0,0,0,1850,0,0,0,3500
+Windham,5359,,,,,,,,,,,,,,
+Windsor,Windsor,Mill Brook,100,9.1,0,0,0,0,0,0,0,0,0,0,
+Windsor,Windsor,Mill Pond,0,0,0,0,300,16.5,0,0,0,0,0,0,
+Windsor,5089,MASTER,100,0,0,0,300,0,0,0,0,0,0,0,400
+Winhall,5340,,,,,,,,,,,,,,
+Winooski,Winooski,Lake Champlain,0,0,0,0,0,0,10000,7.365,0,0,7500,7.65,
+Winooski,5404,MASTER,0,0,0,0,0,0,10000,0,0,0,7500,0,17500
+Wolcott,Wolcott,Zack Woods-Perch Ponds,150,9.1,0,0,0,0,0,0,0,0,0,0,
+Wolcott,5680,MASTER,150,0,0,0,0,0,0,0,0,0,0,0,150
+Woodbury,Woodbury,East Long Pond,0,0,0,0,400,10,0,0,0,0,0,0,
+Woodbury,Woodbury,Greenwood Lake,0,0,0,0,600,10,0,0,400,9,0,0,
+Woodbury,Woodbury,Nelson Pond,0,0,0,0,350,10.2,0,0,150,8,0,0,
+Woodbury,Woodbury,Nichols Pond,0,0,0,0,1000,10,0,0,0,0,0,0,
+Woodbury,Woodbury,Sabin Pond,0,0,0,0,1000,10,0,0,500,8.7,0,0,
+Woodbury,5681,MASTER,0,0,0,0,3000,0,0,0,900,0,0,0,3900
+Woodbury,5681,MASTER,0,0,0,0,350,0,0,0,150,0,0,0,500
+Woodford,Bennington,Adams Reservoir,1900,8.7,0,0,0,0,0,0,0,0,0,0,
+Woodford,Bennington,Red Mill Pond,500,8.7,0,0,0,0,0,0,0,0,0,0,
+Woodstock,Woodstock,Ottauquechee River,0,0,0,0,900,10.1,0,0,0,0,0,0,
+Woodstock,5091,MASTER,0,0,0,0,900,0,0,0,0,0,0,0,900
+Worcester,Worcester,Winooski River North Branch,400,9.1,0,0,0,0,0,0,0,0,0,0,
+Worcester,5682,MASTER,400,0,0,0,0,0,0,0,0,0,0,0,400
