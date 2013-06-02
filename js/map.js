@@ -17,12 +17,20 @@ Fish.ranges = {
 }
 Fish.range = Fish.ranges.parrilla;
 Fish.basemaps = {
-    'Fine Line': 1,
-    'Fresh': 997,
-    'Red Alert': 8,
-    'Midnight Commander': 999
+    'Cloudmade: Fine Line': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 1}),
+    'Cloudmade: Fresh': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 997}),
+    'Cloudmade: Red Alert': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 8}),
+    'Cloudmade: Midnight': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 999}),
+    'OpenStreetMap': new L.TileLayer.OpenStreetMap(),
+    'OpenCycleMap': new L.TileLayer.OpenCycleMap(),
+    'Mapquest OSM': new L.TileLayer.MapQuestOpen.OSM(),
+    'Mapquest Aerial': new L.TileLayer.MapQuestOpen.Aerial(),
+    'Mapbox: World Bright': new L.TileLayer.MapBox({user: 'mapbox', map: 'world-bright'}),
+    'Mapbox: Map Vyofok3q': new L.TileLayer.MapBox({user: 'examples', map: 'map-vyofok3q'}),
+    'Mapbox: Iceland': new L.TileLayer.MapBox({user: 'kkaefer', map: 'iceland'}),
+    'Mapbox: Natural Earth': new L.TileLayer.MapBox({user: 'mapbox', map: 'natural-earth-2'}),
 }
-Fish.basemap = Fish.basemaps['Fine Line'];
+Fish.basemap_layer = Fish.basemaps['Mapquest OSM'];
 
 Fish.fill_algorithm = function(d) {
     var val = d.properties[Fish.data_field];
@@ -61,8 +69,6 @@ Fish.map = new L.Map('map', {
     zoomControl: false
 });
 
-// map.addLayer(new L.Control.Zoom({ position: 'topleft' }));
-Fish.basemap_layer = new L.TileLayer('http://{s}.tile.cloudmade.com/'+ Fish.cloudmade_api_key +'/' + Fish.basemap + '/256/{z}/{x}/{y}.png');
 Fish.map.addLayer(Fish.basemap_layer);
 
 var svg = d3.select(Fish.map.getPanes().overlayPane).append("svg"),
@@ -96,7 +102,6 @@ Fish.draw_features = function() {
     var collection = topojson.feature(topology, topology.objects.vermont);
 
     Fish.collection = collection;
-    // console.log(collection);
 
     var bounds = d3.geo.bounds(collection),
         path = d3.geo.path().projection(project);
@@ -267,14 +272,14 @@ Fish.init_controls = function() {
     var basemap = $('#basemap');
 
     basemap.change(function() {
-        Fish.basemap = $(this).val();
-
-        Fish.basemap_layer.setUrl('http://{s}.tile.cloudmade.com/'+ Fish.cloudmade_api_key +'/' + Fish.basemap + '/256/{z}/{x}/{y}.png');
+        Fish.map.removeLayer(Fish.basemap_layer);
+        Fish.basemap_layer = Fish.basemaps[$(this).val()];
+        Fish.map.addLayer(Fish.basemap_layer);
     });
 
     $.each(Fish.basemaps, function(k, v) {
         option = $('<option/>', {
-            value: v,
+            value: k,
             text: k
         });
         basemap.append(option);
@@ -294,12 +299,10 @@ Fish.update_zoom_control = function(features) {
         });
         select.append(option);
     }
-
 }
 
 $(document).ready(function() {
     Fish.load_csv();
     Fish.init_species_menu();
     Fish.init_controls();
-    // Fish.init_dropdown();
 });
