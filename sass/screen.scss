@@ -51,9 +51,9 @@ svg {
 }
 
 path {
-    stroke: #999;
+    stroke: #333;
     fill: #efefef;
-    shape-rendering: crispEdges;
+    // shape-rendering: crispEdges;
     cursor: pointer;
     opacity: 0.75;
 
@@ -74,7 +74,7 @@ path {
     pointer-events: auto;
 
     select {
-        margin-top: 10px;
+        margin: 5px 0;
     }
 }
 
