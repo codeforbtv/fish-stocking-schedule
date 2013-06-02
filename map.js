@@ -39,7 +39,8 @@ Fish.get_feature_bounds = function(feature) {
 // Initialize leaflet map
 var map = new L.Map('map', {
       center: [43.8, -72.7],
-      zoom: 8
+      zoom: 4,
+      zoomControl: false
     });
 
 map.addLayer(new L.TileLayer('http://{s}.tile.cloudmade.com/'+ Fish.cloudmade_api_key +'/998/256/{z}/{x}/{y}.png'));
