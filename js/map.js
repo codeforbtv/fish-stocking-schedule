@@ -1,19 +1,19 @@
 var Fish = Fish || {};
 
-Fish.csv_file = 'irene-funding-test.csv';
+Fish.csv_file = 'fish-stocking-final.csv';
 Fish.json_file = 'vt.json';
 Fish.cloudmade_api_key = '8ee2a50541944fb9bcedded5165f09d9';
-Fish.data_field = 'fema';
+Fish.data_field = 'total';
 Fish.default_center = [44, -72.4];
 Fish.default_zoom = 8;
 Fish.default_color = '#ccc';
 Fish.ranges = {
-    parrilla: ['#fff7ec', '#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
-    bluegreen: ['#EDF8FB', '#CCECE6', '#99D8C9', '#66C2A4', '#2CA25F', '#006D2C', '#238B45', '#006D2C', '#00441B'],
-    bluepurple: ['#EDF8FB', '#BFD3E6', '#9EBCDA', '#8C96C6', '#8856A7', '#810F7C', '#88419D', '#810F7C', '#4D004B'],
-    greenblue: ['#F0F9E8', '#CCEBC5', '#A8DDB5', '#7BCCC4', '#43A2CA', '#0868AC', '#2B8CBE', '#0868AC', '#084081'],
-    orangered: ['#FEF0D9', '#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
-    purpleblue: ['#F1EEF6', '#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '#045A8D', '#023858']
+    parrilla: ['#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
+    bluegreen: ['#CCECE6', '#99D8C9', '#66C2A4', '#2CA25F', '#006D2C', '#238B45', '#006D2C', '#00441B'],
+    bluepurple: ['#BFD3E6', '#9EBCDA', '#8C96C6', '#8856A7', '#810F7C', '#88419D', '#810F7C', '#4D004B'],
+    greenblue: ['#CCEBC5', '#A8DDB5', '#7BCCC4', '#43A2CA', '#0868AC', '#2B8CBE', '#0868AC', '#084081'],
+    orangered: ['#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
+    purpleblue: ['#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '#045A8D', '#023858']
 }
 Fish.range = Fish.ranges.parrilla;
 Fish.basemaps = {
@@ -31,6 +31,14 @@ Fish.basemaps = {
     'Mapbox: Natural Earth': new L.TileLayer.MapBox({user: 'mapbox', map: 'natural-earth-2'}),
 }
 Fish.basemap_layer = Fish.basemaps['Mapquest OSM'];
+Fish.species_acronym_map = {
+    bkt: 'Brook Trout',
+    lat: 'Lake Trout',
+    rbt: 'Rainbox Trout',
+    stt: 'Steelhead Trout',
+    bnt: 'Brown Trout',
+    las: 'Landlocked Salmon'
+}
 
 Fish.fill_algorithm = function(d) {
     var val = d.properties[Fish.data_field];
@@ -87,7 +95,7 @@ Fish.draw_features = function() {
     var topology = Fish.topology;
 
     for (var i = 0; i < Fish.data.length; i++) {
-        var zip = "0" + Fish.data[i].zipcode;
+        var zip = "0" + Fish.data[i].parent;
 
         for (var j = 0; j < topology.objects.vermont.geometries.length; j++) {
             var jsonZip = topology.objects.vermont.geometries[j].properties.zipcode;
@@ -133,14 +141,7 @@ Fish.draw_features = function() {
         }
     });
 
-    Fish.features.on('click', function(d) {
-        var bounds = Fish.get_feature_bounds(d);
-        Fish.map.fitBounds(bounds.pad(0.25));
-        if (d3.select('#map .active')) {
-            d3.select('#map .active').attr('class', '').style('fill', Fish.fill_algorithm);
-        }
-        d3.select(this).attr('class', 'active');
-    });
+    Fish.features.on('click', Fish.select_feature);
 
     Fish.map.on('viewreset', reset);
     reset();
@@ -167,6 +168,61 @@ Fish.draw_features = function() {
     }
 }
 
+Fish.select_feature = function(feature) {
+    var bounds = Fish.get_feature_bounds(feature),
+        town = feature.properties.town
+        table_rows = [];
+
+    // Get associated rows from csv
+    var town_data = Fish.data.filter(function(row) {
+        return row.parent == town;
+    });
+
+    for (var i = 0; i < town_data.length; i++) {
+        var csv_row = town_data[i];
+
+        $.each(Fish.species_acronym_map, function(k, species) {
+            var count = parseInt(csv_row[k]),
+                length = parseFloat(csv_row[k + '-length']),
+                table_row = {
+                    'waterway': csv_row.water,
+                    'species': species,
+                    'length': length,
+                    'count': count
+                };
+
+            if (count) {
+                table_rows.push(table_row);
+            }
+        });
+    }
+
+    $('#infobox tbody tr').remove();
+
+    for (var i = 0; i < table_rows.length; i++) {
+        var row = table_rows[i],
+            tr = $('<tr />');
+
+        tr.append($('<td />', {html: row.waterway}));
+        tr.append($('<td />', {html: row.species}));
+        tr.append($('<td />', {html: row.length.toFixed(1) + '&rdquo;'}));
+        tr.append($('<td />', {html: add_commas(row.count)}));
+
+        $('#infobox tbody').append(tr);
+    }
+
+    console.log(town_data);
+    console.log(table_rows);
+
+    $('#infobox h2').text(town);
+
+    Fish.map.fitBounds(bounds.pad(0.25));
+    if (d3.select('#map .active')) {
+        d3.select('#map .active').attr('class', '').style('fill', Fish.fill_algorithm);
+    }
+    d3.select(this).attr('class', 'active');
+}
+
 Fish.redraw_features = function() {
     Fish.features.transition().duration(500).style('fill', Fish.fill_algorithm);
 }
@@ -187,18 +243,26 @@ Fish.load_csv = function() {
         // Store the data
         Fish.data = data;
 
-        // Grab the values to quantile
-        Fish.domain = Fish.data.map(function(row) {
-            return parseInt(row[Fish.data_field]);
-        });
-
-        // Define scale to sort data values into color buckets
-        Fish.color = d3.scale.quantile()
-            .domain(Fish.domain)
-            .range(Fish.range);
+        Fish.build_quantiles();
 
         Fish.load_json();
     });
+}
+
+Fish.build_quantiles = function() {
+    // Grab the values to quantile
+    Fish.domain = Fish.data.map(function(row) {
+        return parseInt(row[Fish.data_field]);
+    });
+
+    Fish.domain = Fish.domain.filter(function(val) {
+        return val;
+    });
+
+    // Define scale to sort data values into color buckets
+    Fish.color = d3.scale.quantile()
+        .domain(Fish.domain)
+        .range(Fish.range);
 }
 
 Fish.init_species_menu = function() {
@@ -209,6 +273,9 @@ Fish.init_species_menu = function() {
         $(this).addClass('active');
 
         Fish.data_field = $(this).data('field');
+
+        Fish.build_quantiles();
+
         Fish.redraw_features();
     });
 };
@@ -292,13 +359,28 @@ Fish.update_zoom_control = function(features) {
     select.find('option').remove();
 
     for (var i = 0; i < features.length; i++) {
-        var feature = features[i],
-            option = $('<option/>', {
-            value: feature.properties.town,
-            text: feature.properties.town
-        });
-        select.append(option);
+        var feature = features[i];
+
+        if (feature.properties.town) {
+            var option = $('<option/>', {
+                value: feature.properties.town,
+                text: feature.properties.town
+            });
+            select.append(option);
+        }
     }
+}
+
+function add_commas(nStr) {
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
 }
 
 $(document).ready(function() {
