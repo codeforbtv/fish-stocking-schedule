@@ -39,6 +39,7 @@ svg {
     height: 200px;
     z-index: 2;
     @include background(linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)));
+    pointer-events: none;
 }
 
 #tooltip {
@@ -68,10 +69,6 @@ path {
     // shape-rendering: crispEdges;
     cursor: pointer;
     opacity: 0.75;
-
-    &:hover {
-        // stroke: red;
-    }
 
     &.active {
         // fill: #509e2f;
