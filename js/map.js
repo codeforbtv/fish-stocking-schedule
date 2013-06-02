@@ -1,6 +1,6 @@
 var Fish = Fish || {};
 
-Fish.csv_file = 'fish-stocking-final.csv';
+Fish.csv_file = 'fish.csv';
 Fish.json_file = 'vt.json';
 Fish.cloudmade_api_key = '8ee2a50541944fb9bcedded5165f09d9';
 Fish.data_field = 'total';
@@ -64,7 +64,9 @@ Fish.get_feature_bounds = function(feature) {
             bounds = new L.LatLngBounds(latlng);
         }
 
-        bounds.extend(latlng);
+        if (latlng.lat > 0) {
+            bounds.extend(latlng);
+        }
     }
 
     return bounds;
@@ -379,16 +381,18 @@ Fish.update_zoom_control = function(features) {
 
     select.find('option').remove();
 
+    features = features.filter(function(feature) {
+        return 'MASTER' == feature.properties.water;
+    });
+
     for (var i = 0; i < features.length; i++) {
         var feature = features[i];
 
-        if (feature.properties.town) {
-            var option = $('<option/>', {
-                value: feature.properties.town,
-                text: feature.properties.town
-            });
-            select.append(option);
-        }
+        var option = $('<option/>', {
+            value: feature.properties.town,
+            text: feature.properties.town
+        });
+        select.append(option);
     }
 }
 
