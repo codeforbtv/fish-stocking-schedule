@@ -13,7 +13,7 @@ Fish.ranges = {
     bluepurple: ['#EDF8FB', '#BFD3E6', '#9EBCDA', '#8C96C6', '#8856A7', '#810F7C', '#88419D', '#810F7C', '#4D004B'],
     greenblue: ['#F0F9E8', '#CCEBC5', '#A8DDB5', '#7BCCC4', '#43A2CA', '#0868AC', '#2B8CBE', '#0868AC', '#084081'],
     orangered: ['#FEF0D9', '#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
-    purpleblue: ['#F1EEF6', '#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '045A8D', '#023858']
+    purpleblue: ['#F1EEF6', '#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '#045A8D', '#023858']
 }
 Fish.range = Fish.ranges.parrilla;
 Fish.basemaps = {
@@ -189,7 +189,7 @@ Fish.load_csv = function() {
 
         // Grab the values to quantile
         Fish.domain = Fish.data.map(function(row) {
-            return row[Fish.data_field];
+            return parseInt(row[Fish.data_field]);
         });
 
         // Define scale to sort data values into color buckets
