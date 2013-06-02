@@ -8,14 +8,14 @@ Fish.default_center = [44, -72.4];
 Fish.default_zoom = 8;
 Fish.default_color = '#ccc';
 Fish.ranges = {
-    parrilla: ['#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
-    bluegreen: ['#CCECE6', '#99D8C9', '#66C2A4', '#2CA25F', '#006D2C', '#238B45', '#006D2C', '#00441B'],
-    bluepurple: ['#BFD3E6', '#9EBCDA', '#8C96C6', '#8856A7', '#810F7C', '#88419D', '#810F7C', '#4D004B'],
-    greenblue: ['#CCEBC5', '#A8DDB5', '#7BCCC4', '#43A2CA', '#0868AC', '#2B8CBE', '#0868AC', '#084081'],
-    orangered: ['#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
-    purpleblue: ['#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '#045A8D', '#023858']
+    'Parrilla': ['#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
+    'Blue Green': ['#CCECE6', '#99D8C9', '#66C2A4', '#2CA25F', '#006D2C', '#238B45', '#006D2C', '#00441B'],
+    'Blue Purple': ['#BFD3E6', '#9EBCDA', '#8C96C6', '#8856A7', '#810F7C', '#88419D', '#810F7C', '#4D004B'],
+    'Green Blue': ['#CCEBC5', '#A8DDB5', '#7BCCC4', '#43A2CA', '#0868AC', '#2B8CBE', '#0868AC', '#084081'],
+    'Orange Red': ['#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
+    'Purple Blue': ['#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '#045A8D', '#023858']
 }
-Fish.range = Fish.ranges.parrilla;
+Fish.range = Fish.ranges['Parrilla'];
 Fish.basemaps = {
     'Cloudmade: Fine Line': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 1}),
     'Cloudmade: Fresh': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 997}),
@@ -321,6 +321,8 @@ Fish.init_controls = function() {
 
     var zcta = $('#zcta');
 
+    zcta.chosen();
+
     zcta.change(function() {
         var town = $(this).val(),
             features = Fish.collection.features,
@@ -330,8 +332,7 @@ Fish.init_controls = function() {
             var feature = features[i];
 
             if (feature.properties.town == town) {
-                bounds = Fish.get_feature_bounds(feature);
-                Fish.map.fitBounds(bounds.pad(0.25));
+                Fish.select_feature(feature);
                 break;
             }
         }
@@ -359,6 +360,8 @@ Fish.init_controls = function() {
         color.append(option);
     });
 
+    color.chosen();
+
     var basemap = $('#basemap');
 
     basemap.change(function() {
@@ -374,6 +377,8 @@ Fish.init_controls = function() {
         });
         basemap.append(option);
     });
+
+    basemap.chosen();
 };
 
 Fish.update_zoom_control = function(features) {
@@ -394,6 +399,8 @@ Fish.update_zoom_control = function(features) {
         });
         select.append(option);
     }
+
+    select.trigger('liszt:updated');
 }
 
 function add_commas(nStr) {
