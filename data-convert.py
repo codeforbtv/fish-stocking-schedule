@@ -30,7 +30,7 @@ def create_rows():
     This function creates the new csv rows and breaks multi-town entries
     into 2 (or 3), dividing the fish equally among towns"""
 
-    f = csv.reader(open('fish-stocking1.csv', 'rU'))
+    f = csv.reader(open('data/fish-stocking1.csv', 'rU'))
     fish = [l for l in f]
 
     new_list = []
@@ -69,14 +69,14 @@ def create_rows():
             else:
                 new_list.append(fish_index(row))
 
-    writer = csv.writer(open('fish-stocking-1.csv', 'w'))
+    writer = csv.writer(open('data/fish-stocking-1.csv', 'w'))
     writer.writerows(new_list)
 
 def combine_waterways():
     """This function creates one entry per town, per waterway, adding all of
     the fish totals and creating the new average"""
 
-    f = csv.reader(open('fish-stocking1.csv', 'rU'))
+    f = csv.reader(open('data/fish-stocking1.csv', 'rU'))
     fish = [l for l in f]
     new_list = []
 
@@ -100,14 +100,14 @@ def combine_waterways():
         if town_water not in new_list:
             new_list.append(town_water)
 
-    writer = csv.writer(open('fish-stocking2.csv', 'w'))
+    writer = csv.writer(open('data/fish-stocking2.csv', 'w'))
     writer.writerows(new_list)
 
 
 def create_master():
     """Creates one 'master' entry per town, summing fish totals, ignoring length"""
 
-    f = csv.reader(open('fish-stocking2.csv', 'rU'))
+    f = csv.reader(open('data/fish-stocking2.csv', 'rU'))
     fish = [l for l in f]
 
     new_list = []
@@ -115,13 +115,6 @@ def create_master():
         town_water = [0]*14
         town_water[1] = 'MASTER'
         town_water[0] = row[0]
-        for other in fish:
-            if row[0] == other[0]:
-                idx = [2,4,6,8,10,12]
-                for i in idx:
-                    if other[i]:
-                        num_fish = int(other[i])
-                        town_water[i] += num_fish
 
         if town_water not in new_list:
             new_list.append(town_water)
@@ -129,16 +122,16 @@ def create_master():
     for row in fish:
         new_list.append(row)
 
-    writer = csv.writer(open('fish-stocking3.csv', 'w'))
+    writer = csv.writer(open('data/fish-stocking3.csv', 'w'))
     writer.writerows(new_list)
 
 
 def match_zipcode():
     """Matches fisheries data to vt.json zipcode data"""
-    f = csv.reader(open('fish-stocking3.csv', 'rU'))
+    f = csv.reader(open('data/fish-stocking3.csv', 'rU'))
     fish = [l for l in f]
 
-    z = csv.reader(open('vt-zipcode.csv', 'rU'))
+    z = csv.reader(open('data/vt-zipcode.csv', 'rU'))
     zips = [l for l in z]
 
     new_list = []
@@ -157,14 +150,14 @@ def match_zipcode():
         else:
             new_list.append(row)
 
-    writer = csv.writer(open('fish-stocking4.csv', 'w'))
+    writer = csv.writer(open('data/fish-stocking4.csv', 'w'))
     writer.writerows(new_list)
 
 def make_parent():
     """Assigns a parent polygon to all child towns (which have multiple
     unique entries by watereway"""
 
-    f = csv.reader(open('fish-stocking4.csv', 'rU'))
+    f = csv.reader(open('data/fish-stocking4.csv', 'rU'))
     fish = [l for l in f]
 
     new_list = []
@@ -175,11 +168,29 @@ def make_parent():
                     row[1] = other[1]
                 elif row[0] == other[0] and len(other[1]) == 4 and other[2] == 'MASTER':
                     row[1] = other[0]
-        if len(row[1]) != 4 and row[2] == 'MASTER':
-            continue
-        else:
             new_list.append(row)
-    writer = csv.writer(open('fish-stocking-final.csv', 'w'))
+
+    for row in fish:
+        if row[2] == 'MASTER':
+            idx = [3,5,7,9,11,13]
+            for i in idx:
+                row[i] = 0
+            for other in fish:
+                if row[0] == other[1]:
+                    for i in idx:
+                        if other[i]:
+                            print other[0], other[i]
+                            num_fish = int(other[i])
+                            row[i] += num_fish
+            total_fish = 0
+            for i in idx:
+                num_fish = int(row[i])
+                total_fish += num_fish
+            row.append(total_fish)
+            print row
+            new_list.append(row)
+
+    writer = csv.writer(open('data/fish-stocking-final.csv', 'w'))
     writer.writerows(new_list)
 
 combine_waterways()
