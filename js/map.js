@@ -4,17 +4,19 @@ Fish.csv_file = 'irene-funding-test.csv';
 Fish.json_file = 'vt.json';
 Fish.cloudmade_api_key = '8ee2a50541944fb9bcedded5165f09d9';
 Fish.data_field = 'fema';
+Fish.default_center = [44, -72.4];
+Fish.default_zoom = 8;
 Fish.default_color = '#ccc';
 
 Fish.fill_algorithm = function(d) {
     var val = d.properties[Fish.data_field];
 
-    console.log(val);
-
     if (val) {
-        return color(val);
+        return Fish.color(val);
     } else {
-        return Fish.default_color;
+        // return Fish.default_color;
+        return null;
+
     }
 }
 
@@ -37,33 +39,35 @@ Fish.get_feature_bounds = function(feature) {
 }
 
 // Initialize leaflet map
-var map = new L.Map('map', {
-      center: [43.8, -72.7],
-      zoom: 4,
-      zoomControl: false
-    });
+Fish.map = new L.Map('map', {
+    center: Fish.default_center,
+    zoom: Fish.default_zoom,
+    zoomControl: false
+});
 
-map.addLayer(new L.TileLayer('http://{s}.tile.cloudmade.com/'+ Fish.cloudmade_api_key +'/998/256/{z}/{x}/{y}.png'));
+// map.addLayer(new L.Control.Zoom({ position: 'topleft' }));
 
-var svg = d3.select(map.getPanes().overlayPane).append("svg"),
+Fish.map.addLayer(new L.TileLayer('http://{s}.tile.cloudmade.com/'+ Fish.cloudmade_api_key +'/1/256/{z}/{x}/{y}.png'));
+
+var svg = d3.select(Fish.map.getPanes().overlayPane).append("svg"),
     g = svg.append("g").attr("class", "leaflet-zoom-hide");
 
-// Define scale to sort data values into color buckets
-var color = d3.scale.threshold()
-    .domain([1000, 10000, 50000, 100000, 200000, 500000, 1000000, 2500000])
-    .range(["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]);
+// var y = d3.scale.sqrt()
+//     .domain([0, 2700000])
+//     .range([0,325]);
 
-var y = d3.scale.sqrt()
-    .domain([0, 2700000])
-    .range([0,325]);
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .tickValues(color.domain())
-    .orient("right");
+// var yAxis = d3.svg.axis()
+//     .scale(y)
+//     .tickValues(Fish.color.domain())
+//     .orient("right");
 
 Fish.json_loaded = function(error, topology) {
+    // Store the topology
     Fish.topology = topology;
+
+    // Add the polygons to the dropdown
+
+
     Fish.draw_features();
 }
 
@@ -91,45 +95,43 @@ Fish.draw_features = function() {
     var bounds = d3.geo.bounds(collection),
         path = d3.geo.path().projection(project);
 
-    Fish.feature = g.selectAll("path")
+    Fish.features = g.selectAll("path")
         .data(collection.features)
         .enter().append('path')
         .attr('d', path)
         .style('fill', Fish.fill_algorithm);
 
-    Fish.feature.on('mouseover', function(d) {
+    Fish.features.on('mouseover', function(d) {
         var xPosition = d3.mouse(this)[0];
         var yPosition = d3.mouse(this)[1] - 30;
 
-        g.append("text")
-            .attr("id", "tooltip")
-            .attr("x", xPosition)
-            .attr("y", yPosition)
-            .attr("text-anchor", "middle")
-            .attr("font-family", "sans-serif")
-            .attr("font-size", "11px")
-            .attr("font-weight", "bold")
-            .attr('fill', "black")
+        g.append('text')
+            .attr('id', 'tooltip')
+            .attr('x', xPosition)
+            .attr('y', yPosition)
+            .attr('text-anchor', 'middle')
             .text(d.properties.town);
 
         d3.select(this).style('fill', "#509e2f");
     });
 
-    Fish.feature.on('mouseout', function(d) {
+    Fish.features.on('mouseout', function(d) {
         d3.select("#tooltip").remove();
         if (d3.select(this).attr('class') !== 'active') {
-            d3.select(this).transition().duration(250).style('fill', Fish.fill_algorithm);
+            d3.select(this).transition().duration(250).style({'fill': Fish.fill_algorithm, opacity: 0.75});
         }
     });
 
-    Fish.feature.on('click', function(d) {
+    Fish.features.on('click', function(d) {
         var bounds = Fish.get_feature_bounds(d);
-        map.fitBounds(bounds.pad(0.25));
-        d3.select('.active').attr('class', '').style('fill', Fish.fill_algorithm);
-        d3.select(this).attr('class', 'active').style('fill', "#509e2f");
+        Fish.map.fitBounds(bounds.pad(0.25));
+        if (d3.select('#map .active')) {
+            d3.select('#map .active').attr('class', '').style('fill', Fish.fill_algorithm);
+        }
+        d3.select(this).attr('class', 'active');
     });
 
-    map.on('viewreset', reset);
+    Fish.map.on('viewreset', reset);
     reset();
 
     // Reposition the SVG to cover the features.
@@ -144,18 +146,18 @@ Fish.draw_features = function() {
 
         g.attr("transform", "translate(" + -bottomLeft[0] + "," + -topRight[1] + ")");
 
-        Fish.feature.attr("d", path);
+        Fish.features.attr("d", path);
     }
 
     // Use Leaflet to implement a D3 geographic projection.
     function project(x) {
-        var point = map.latLngToLayerPoint(new L.LatLng(x[1], x[0]));
+        var point = Fish.map.latLngToLayerPoint(new L.LatLng(x[1], x[0]));
         return [point.x, point.y];
     }
 }
 
 Fish.redraw_features = function() {
-    Fish.feature.transition().duration(250).style('fill', Fish.fill_algorithm);
+    Fish.features.transition().duration(250).style('fill', Fish.fill_algorithm);
 }
 
 Fish.load_json = function() {
@@ -164,14 +166,25 @@ Fish.load_json = function() {
 
 Fish.load_csv = function() {
     d3.csv(Fish.csv_file, function(data) {
+        // Store the data
         Fish.data = data;
+
+        // Grab the values to quantile
+        Fish.domain = Fish.data.map(function(row) {
+            return row[Fish.data_field];
+        });
+
+        // Define scale to sort data values into color buckets
+        Fish.color = d3.scale.quantile()
+            .domain(Fish.domain)
+            .range(["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]);
+
         Fish.load_json();
     });
 }
 
 Fish.init_species_menu = function() {
-    var menu = $('#species ul'),
-        species = menu.find('li');
+    var species = $('#species li');
 
     species.click(function() {
         $(this).parent().find('.active').removeClass('active');
@@ -182,7 +195,29 @@ Fish.init_species_menu = function() {
     });
 };
 
+Fish.init_controls = function() {
+    var buttons = $('#zoom button');
+
+    buttons.click(function() {
+        var zoom = $(this).data('zoom');
+
+        switch(zoom) {
+            case 'state':
+                Fish.map.setView(Fish.default_center, Fish.default_zoom);
+            case 'zoom-in':
+                Fish.map.zoomIn();
+            case 'zoom-out':
+                Fish.map.zoomOut();
+        }
+        $(this).parent().find('.active').removeClass('active');
+        $(this).addClass('active');
+
+        Fish.data_field = $(this).data('field');
+    });
+};
+
 $(document).ready(function() {
     Fish.load_csv();
     Fish.init_species_menu();
+    Fish.init_controls();
 });
