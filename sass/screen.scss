@@ -1,7 +1,15 @@
 @import 'compass/css3/images';
+@import 'compass/css3/box-shadow';
 
 body {
     margin: 0;
+}
+
+body,
+input,
+select,
+textarea {
+    font-family: 'ff-enzo-web', sans-serif;
 }
 
 svg {
@@ -61,6 +69,11 @@ svg {
 
 .navbar {
     margin: 20px;
+}
+
+.well,
+.navbar {
+    @include single-box-shadow(rgba(0, 0, 0, 0.25), 0, 0, 10px);
 }
 
 path {
