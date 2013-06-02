@@ -209,6 +209,8 @@ Fish.select_feature = function(feature) {
         return a.town > b.town;
     });
 
+    $('#infobox h3, #infobox p').hide();
+    $('#infobox table').show();
     $('#infobox tbody tr').remove();
 
     var towns = [];
@@ -228,10 +230,21 @@ Fish.select_feature = function(feature) {
         towns.push(row.town);
     }
 
+    if (!table_rows.length) {
+        var tr = $('<tr />');
+
+        tr.append($('<td />', {
+            colspan: 5,
+            html: '<strong>No fish stocked in this town :(</strong>'
+        }));
+
+        $('#infobox tbody').append(tr);
+    }
+
     // Hide town column if only one town_data
     towns = uniquify_array(towns);
 
-    if (towns.length === 1) {
+    if (towns.length == 1) {
         $('#infobox td:first-child, #infobox th:first-child').hide();
     } else {
         $('#infobox td:first-child, #infobox th:first-child').show();
