@@ -185,6 +185,7 @@ Fish.select_feature = function(feature) {
             var count = parseInt(csv_row[k]),
                 length = parseFloat(csv_row[k + '-length']),
                 table_row = {
+                    'town': csv_row.town,
                     'waterway': csv_row.water,
                     'species': species,
                     'length': length,
@@ -199,20 +200,31 @@ Fish.select_feature = function(feature) {
 
     $('#infobox tbody tr').remove();
 
+    var towns = [];
+
     for (var i = 0; i < table_rows.length; i++) {
         var row = table_rows[i],
             tr = $('<tr />');
 
+        tr.append($('<td />', {html: row.town}));
         tr.append($('<td />', {html: row.waterway}));
         tr.append($('<td />', {html: row.species}));
         tr.append($('<td />', {html: row.length.toFixed(1) + '&rdquo;'}));
         tr.append($('<td />', {html: add_commas(row.count)}));
 
         $('#infobox tbody').append(tr);
+
+        towns.push(row.town);
     }
 
-    console.log(town_data);
-    console.log(table_rows);
+    // Hide town column if only one town_data
+    towns = uniquify_array(towns);
+
+    if (towns.length === 1) {
+        $('#infobox td:first-child, #infobox th:first-child').hide();
+    } else {
+        $('#infobox td:first-child, #infobox th:first-child').show();
+    }
 
     $('#infobox h2').text(town);
 
@@ -381,6 +393,21 @@ function add_commas(nStr) {
         x1 = x1.replace(rgx, '$1' + ',' + '$2');
     }
     return x1 + x2;
+}
+
+function uniquify_array(arr) {
+  var i,
+      len=arr.length,
+      out=[],
+      obj={};
+
+  for (i=0;i<len;i++) {
+    obj[arr[i]]=0;
+  }
+  for (i in obj) {
+    out.push(i);
+  }
+  return out;
 }
 
 $(document).ready(function() {
