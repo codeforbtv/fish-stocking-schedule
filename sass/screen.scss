@@ -78,10 +78,10 @@ svg {
 
 path {
     stroke: #333;
-    fill: #efefef;
+    fill: #fff;
     // shape-rendering: crispEdges;
     cursor: pointer;
-    opacity: 0.75;
+    // opacity: 0.75;
 
     &.active {
         // fill: #509e2f;
