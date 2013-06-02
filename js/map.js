@@ -198,6 +198,15 @@ Fish.select_feature = function(feature) {
         });
     }
 
+    // Sort the table rows by town then waterway
+    table_rows = table_rows.sort(function(a, b) {
+        return a.waterway > b.waterway;
+    });
+
+    table_rows = table_rows.sort(function(a, b) {
+        return a.town > b.town;
+    });
+
     $('#infobox tbody tr').remove();
 
     var towns = [];
