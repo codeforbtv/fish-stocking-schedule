@@ -14,13 +14,8 @@ Fish.ranges = {
     'Green Blue': ['#CCEBC5', '#A8DDB5', '#7BCCC4', '#43A2CA', '#0868AC', '#2B8CBE', '#0868AC', '#084081'],
     'Orange Red': ['#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
     'Purple Blue': ['#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '#045A8D', '#023858']
-<<<<<<< HEAD
-}
-Fish.range = 'Green Blue';
-=======
 };
 Fish.range = Fish.ranges['Parrilla'];
->>>>>>> f68a068da958bc8510b508eeef408b820ea8017d
 Fish.basemaps = {
     'Cloudmade: Fine Line': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 1}),
     'Cloudmade: Fresh': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 997}),
