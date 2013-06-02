@@ -15,7 +15,7 @@ Fish.ranges = {
     'Orange Red': ['#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
     'Purple Blue': ['#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '#045A8D', '#023858']
 }
-Fish.range = Fish.ranges['Parrilla'];
+Fish.range = 'Green Blue';
 Fish.basemaps = {
     'Cloudmade: Fine Line': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 1}),
     'Cloudmade: Fresh': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 997}),
@@ -30,7 +30,7 @@ Fish.basemaps = {
     'Mapbox: Iceland': new L.TileLayer.MapBox({user: 'kkaefer', map: 'iceland'}),
     'Mapbox: Natural Earth': new L.TileLayer.MapBox({user: 'mapbox', map: 'natural-earth-2'}),
 }
-Fish.basemap_layer = Fish.basemaps['Mapquest OSM'];
+Fish.basemap_layer = 'OpenCycleMap';
 Fish.species_acronym_map = {
     bkt: 'Brook Trout',
     lat: 'Lake Trout',
@@ -79,7 +79,7 @@ Fish.map = new L.Map('map', {
     zoomControl: false
 });
 
-Fish.map.addLayer(Fish.basemap_layer);
+Fish.map.addLayer(Fish.basemaps[Fish.basemap_layer]);
 
 var svg = d3.select(Fish.map.getPanes().overlayPane).append("svg"),
     g = svg.append("g").attr("class", "leaflet-zoom-hide");
@@ -298,7 +298,7 @@ Fish.build_quantiles = function() {
     // Define scale to sort data values into color buckets
     Fish.color = d3.scale.quantile()
         .domain(Fish.domain)
-        .range(Fish.range);
+        .range(Fish.ranges[Fish.range]);
 }
 
 Fish.init_species_menu = function() {
@@ -356,12 +356,12 @@ Fish.init_controls = function() {
     color.change(function() {
         var color = $(this).val();
 
-        Fish.range = Fish.ranges[color];
+        Fish.range = color;
 
         // Define scale to sort data values into color buckets
         Fish.color = d3.scale.quantile()
             .domain(Fish.domain)
-            .range(Fish.range);
+            .range(Fish.ranges[Fish.range]);
         Fish.redraw_features();
     });
 
@@ -370,6 +370,11 @@ Fish.init_controls = function() {
             value: k,
             text: k
         });
+
+        if (k == Fish.range) {
+            option.attr('selected', 'selected');
+        }
+
         color.append(option);
     });
 
@@ -378,16 +383,22 @@ Fish.init_controls = function() {
     var basemap = $('#basemap');
 
     basemap.change(function() {
-        Fish.map.removeLayer(Fish.basemap_layer);
-        Fish.basemap_layer = Fish.basemaps[$(this).val()];
-        Fish.map.addLayer(Fish.basemap_layer);
+        Fish.map.removeLayer(Fish.basemaps[Fish.basemap_layer]);
+        Fish.basemap_layer = $(this).val();
+        Fish.map.addLayer(Fish.basemaps[Fish.basemap_layer]);
     });
 
     $.each(Fish.basemaps, function(k, v) {
+        console.log(k, Fish.basemap_layer);
         option = $('<option/>', {
             value: k,
-            text: k
+            text: k,
         });
+
+        if (k == Fish.basemap_layer) {
+            option.attr('selected', 'selected');
+        }
+
         basemap.append(option);
     });
 
