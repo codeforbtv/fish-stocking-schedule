@@ -26,24 +26,23 @@ This project was a part of the first [\#CodeForBTV](http://codeforbtv.org/) even
 - The map could be further improved by a date filter that allows users to see when the fish were stocked.
 - A map layer including VT surface waters would be interesting.
 - Automate data upload.
+- Add scale back to map
 
 ###Plug and Chug VT Map
 This project could be used as a template to create interactive maps of the state of Vermont organized by town. A better base map would be helpful, possibly using older census data.
 
 ##Source
-Data: [VT Fish and Wildlife](http://www.anr.state.vt.us/fwd/stockingschedule.aspx)
-Choropleth: [Vermont Public Radio](http://www.vpr.net)
+- Data: [VT Fish and Wildlife](http://www.anr.state.vt.us/fwd/stockingschedule.aspx)
+- Choropleth: [Vermont Public Radio](http://www.vpr.net)
 
 ##Technology Used
-[D3](http://d3js.org)
 
-[Leaflet](http://leafletjs.com)
-
-[Chosen](http://harvesthq.github.io/chosen/)
-
-[Bootstrap](http://twitter.github.io/bootstrap/)
+- [D3](http://d3js.org)
+- [Leaflet](http://leafletjs.com)
+- [Chosen](http://harvesthq.github.io/chosen/)
+- [Bootstrap](http://twitter.github.io/bootstrap/)
 
 ##Authors
-[Joey Di Stefano](http://www.github.com/joeydi)
 
-[Matt Parrilla](http://www.github.com/mattparrilla)
+- [Joey Di Stefano](http://www.github.com/joeydi)
+- [Matt Parrilla](http://www.github.com/mattparrilla)
