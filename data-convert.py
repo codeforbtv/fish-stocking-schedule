@@ -193,7 +193,26 @@ def make_parent():
     writer = csv.writer(open('data/fish-stocking-final.csv', 'w'))
     writer.writerows(new_list)
 
-combine_waterways()
-create_master()
-match_zipcode()
-make_parent()
+def add_empty_zips():
+    f = csv.reader(open('fish-stocking-final.csv', 'rU'))
+    fish = [l for l in f]
+
+    z = csv.reader(open('../data/vt-zipcode.csv', 'rU'))
+    zips = [l for l in z]
+
+    new_list = []
+    zip_list = []
+    for row in fish:
+        new_list.append(row)
+        if len(row[1]) == 4 and row[2] == 'MASTER':
+            zip_list.append(row[1])
+
+    for z in zips:
+        if z[1] not in zip_list:
+            if len(z[1]) == 4:
+                new_list.append([z[0], z[1]])
+
+    writer = csv.writer(open('fish-stocking-master.csv', 'w'))
+    writer.writerows(new_list)
+
+add_empty_zips()
