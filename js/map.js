@@ -7,6 +7,22 @@ Fish.data_field = 'fema';
 Fish.default_center = [44, -72.4];
 Fish.default_zoom = 8;
 Fish.default_color = '#ccc';
+Fish.ranges = {
+    parrilla: ['#fff7ec', '#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
+    bluegreen: ['#EDF8FB', '#CCECE6', '#99D8C9', '#66C2A4', '#2CA25F', '#006D2C', '#238B45', '#006D2C', '#00441B'],
+    bluepurple: ['#EDF8FB', '#BFD3E6', '#9EBCDA', '#8C96C6', '#8856A7', '#810F7C', '#88419D', '#810F7C', '#4D004B'],
+    greenblue: ['#F0F9E8', '#CCEBC5', '#A8DDB5', '#7BCCC4', '#43A2CA', '#0868AC', '#2B8CBE', '#0868AC', '#084081'],
+    orangered: ['#FEF0D9', '#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
+    purpleblue: ['#F1EEF6', '#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '045A8D', '#023858']
+}
+Fish.range = Fish.ranges.parrilla;
+Fish.basemaps = {
+    'Fine Line': 1,
+    'Fresh': 997,
+    'Red Alert': 8,
+    'Midnight Commander': 999
+}
+Fish.basemap = Fish.basemaps['Fine Line'];
 
 Fish.fill_algorithm = function(d) {
     var val = d.properties[Fish.data_field];
@@ -46,8 +62,8 @@ Fish.map = new L.Map('map', {
 });
 
 // map.addLayer(new L.Control.Zoom({ position: 'topleft' }));
-
-Fish.map.addLayer(new L.TileLayer('http://{s}.tile.cloudmade.com/'+ Fish.cloudmade_api_key +'/1/256/{z}/{x}/{y}.png'));
+Fish.basemap_layer = new L.TileLayer('http://{s}.tile.cloudmade.com/'+ Fish.cloudmade_api_key +'/' + Fish.basemap + '/256/{z}/{x}/{y}.png');
+Fish.map.addLayer(Fish.basemap_layer);
 
 var svg = d3.select(Fish.map.getPanes().overlayPane).append("svg"),
     g = svg.append("g").attr("class", "leaflet-zoom-hide");
@@ -60,16 +76,6 @@ var svg = d3.select(Fish.map.getPanes().overlayPane).append("svg"),
 //     .scale(y)
 //     .tickValues(Fish.color.domain())
 //     .orient("right");
-
-Fish.json_loaded = function(error, topology) {
-    // Store the topology
-    Fish.topology = topology;
-
-    // Add the polygons to the dropdown
-
-
-    Fish.draw_features();
-}
 
 Fish.draw_features = function() {
     var topology = Fish.topology;
@@ -157,11 +163,18 @@ Fish.draw_features = function() {
 }
 
 Fish.redraw_features = function() {
-    Fish.features.transition().duration(250).style('fill', Fish.fill_algorithm);
+    Fish.features.transition().duration(500).style('fill', Fish.fill_algorithm);
 }
 
 Fish.load_json = function() {
-    d3.json(Fish.json_file, Fish.json_loaded);
+    d3.json(Fish.json_file, function(error, topology) {
+        // Store the topology
+        Fish.topology = topology;
+
+        Fish.draw_features();
+
+        Fish.update_zoom_control(Fish.collection.features);
+    });
 }
 
 Fish.load_csv = function() {
@@ -177,7 +190,7 @@ Fish.load_csv = function() {
         // Define scale to sort data values into color buckets
         Fish.color = d3.scale.quantile()
             .domain(Fish.domain)
-            .range(["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]);
+            .range(Fish.range);
 
         Fish.load_json();
     });
@@ -209,15 +222,84 @@ Fish.init_controls = function() {
             case 'zoom-out':
                 Fish.map.zoomOut();
         }
-        $(this).parent().find('.active').removeClass('active');
-        $(this).addClass('active');
+    });
 
-        Fish.data_field = $(this).data('field');
+    var zcta = $('#zcta');
+
+    zcta.change(function() {
+        var town = $(this).val(),
+            features = Fish.collection.features,
+            bounds;
+
+        for (var i = 0; i < features.length; i++) {
+            var feature = features[i];
+
+            if (feature.properties.town == town) {
+                bounds = Fish.get_feature_bounds(feature);
+                Fish.map.fitBounds(bounds.pad(0.25));
+                break;
+            }
+        }
+    });
+
+    var color = $('#color');
+
+    color.change(function() {
+        var color = $(this).val();
+
+        Fish.range = Fish.ranges[color];
+
+        // Define scale to sort data values into color buckets
+        Fish.color = d3.scale.quantile()
+            .domain(Fish.domain)
+            .range(Fish.range);
+        Fish.redraw_features();
+    });
+
+    $.each(Fish.ranges, function(k, range) {
+        option = $('<option/>', {
+            value: k,
+            text: k
+        });
+        color.append(option);
+    });
+
+    var basemap = $('#basemap');
+
+    basemap.change(function() {
+        Fish.basemap = $(this).val();
+
+        Fish.basemap_layer.setUrl('http://{s}.tile.cloudmade.com/'+ Fish.cloudmade_api_key +'/' + Fish.basemap + '/256/{z}/{x}/{y}.png');
+    });
+
+    $.each(Fish.basemaps, function(k, v) {
+        option = $('<option/>', {
+            value: v,
+            text: k
+        });
+        basemap.append(option);
     });
 };
+
+Fish.update_zoom_control = function(features) {
+    var select = $('#zcta');
+
+    select.find('option').remove();
+
+    for (var i = 0; i < features.length; i++) {
+        var feature = features[i],
+            option = $('<option/>', {
+            value: feature.properties.town,
+            text: feature.properties.town
+        });
+        select.append(option);
+    }
+
+}
 
 $(document).ready(function() {
     Fish.load_csv();
     Fish.init_species_menu();
     Fish.init_controls();
+    // Fish.init_dropdown();
 });
