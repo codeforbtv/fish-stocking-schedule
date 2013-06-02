@@ -22,11 +22,10 @@ This project was a part of the first [\#CodeForBTV](http://codeforbtv.org/) even
 ##Future Plans
 
 ###Fish Stocking Map
-The map could be further improved by a date filter that allows users to see when the fish were stocked.
 
-A map layer including VT surface waters would be interesting.
-
-Automate data upload.
+- The map could be further improved by a date filter that allows users to see when the fish were stocked.
+- A map layer including VT surface waters would be interesting.
+- Automate data upload.
 
 ###Plug and Chug VT Map
 This project could be used as a template to create interactive maps of the state of Vermont organized by town. A better base map would be helpful, possibly using older census data.
@@ -37,10 +36,14 @@ Choropleth: [Vermont Public Radio](http://www.vpr.net)
 
 ##Technology Used
 [D3](http://d3js.org)
+
 [Leaflet](http://leafletjs.com)
+
 [Chosen](http://harvesthq.github.io/chosen/)
+
 [Bootstrap](http://twitter.github.io/bootstrap/)
 
 ##Authors
 [Joey Di Stefano](http://www.github.com/joeydi)
+
 [Matt Parrilla](http://www.github.com/mattparrilla)
