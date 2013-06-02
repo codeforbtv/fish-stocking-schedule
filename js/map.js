@@ -1,7 +1,7 @@
 var Fish = Fish || {};
 
-Fish.csv_file = 'fish.csv';
-Fish.json_file = 'vt.json';
+Fish.csv_file = './fish.csv';
+Fish.json_file = './vt.json';
 Fish.cloudmade_api_key = '8ee2a50541944fb9bcedded5165f09d9';
 Fish.data_field = 'total';
 Fish.default_center = [44, -72.4];
@@ -14,7 +14,7 @@ Fish.ranges = {
     'Green Blue': ['#CCEBC5', '#A8DDB5', '#7BCCC4', '#43A2CA', '#0868AC', '#2B8CBE', '#0868AC', '#084081'],
     'Orange Red': ['#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
     'Purple Blue': ['#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '#045A8D', '#023858']
-}
+};
 Fish.range = Fish.ranges['Parrilla'];
 Fish.basemaps = {
     'Cloudmade: Fine Line': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 1}),
