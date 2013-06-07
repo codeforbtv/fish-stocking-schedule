@@ -8,14 +8,13 @@ Fish.default_center = [44, -72.4];
 Fish.default_zoom = 8;
 Fish.default_color = '#ccc';
 Fish.ranges = {
-    'Parrilla': ['#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
+    'Orange Red': ['#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
     'Blue Green': ['#CCECE6', '#99D8C9', '#66C2A4', '#2CA25F', '#006D2C', '#238B45', '#006D2C', '#00441B'],
     'Blue Purple': ['#BFD3E6', '#9EBCDA', '#8C96C6', '#8856A7', '#810F7C', '#88419D', '#810F7C', '#4D004B'],
     'Green Blue': ['#CCEBC5', '#A8DDB5', '#7BCCC4', '#43A2CA', '#0868AC', '#2B8CBE', '#0868AC', '#084081'],
-    'Orange Red': ['#FDD49E', '#FDBB84', '#FC8D59', '#E34A33', '#B30000', '#D7301F', '#B30000', '#7F0000'],
     'Purple Blue': ['#D0D1E6', '#A6BDDB', '#74A9CF', '#2B8CBE', '#045A8D', '#0570B0', '#045A8D', '#023858']
 };
-Fish.range = 'Parrilla';
+Fish.range = 'Orange Red';
 Fish.basemaps = {
     'Cloudmade: Fine Line': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 1}),
     'Cloudmade: Fresh': new L.TileLayer.CloudMade({key: Fish.cloudmade_api_key, styleId: 997}),
@@ -28,17 +27,17 @@ Fish.basemaps = {
     'Mapbox: World Bright': new L.TileLayer.MapBox({user: 'mapbox', map: 'world-bright'}),
     'Mapbox: Map Vyofok3q': new L.TileLayer.MapBox({user: 'examples', map: 'map-vyofok3q'}),
     'Mapbox: Iceland': new L.TileLayer.MapBox({user: 'kkaefer', map: 'iceland'}),
-    'Mapbox: Natural Earth': new L.TileLayer.MapBox({user: 'mapbox', map: 'natural-earth-2'}),
-}
+    'Mapbox: Natural Earth': new L.TileLayer.MapBox({user: 'mapbox', map: 'natural-earth-2'})
+};
 Fish.basemap_layer = 'OpenCycleMap';
 Fish.species_acronym_map = {
     bkt: 'Brook Trout',
     lat: 'Lake Trout',
-    rbt: 'Rainbox Trout',
+    rbt: 'Rainbow Trout',
     stt: 'Steelhead Trout',
     bnt: 'Brown Trout',
     las: 'Landlocked Salmon'
-}
+};
 
 Fish.fill_algorithm = function(d) {
     var val = d.properties[Fish.data_field];
@@ -50,7 +49,7 @@ Fish.fill_algorithm = function(d) {
         return null;
 
     }
-}
+};
 
 Fish.get_feature_bounds = function(feature) {
     var coordinates = feature.geometry.coordinates[0],
@@ -60,7 +59,7 @@ Fish.get_feature_bounds = function(feature) {
         var latlng = coordinates[i],
             latlng = new L.LatLng(latlng[1], latlng[0]);
 
-        if (i == 0) {
+        if (i === 0) {
             bounds = new L.LatLngBounds(latlng);
         }
 
@@ -83,15 +82,6 @@ Fish.map.addLayer(Fish.basemaps[Fish.basemap_layer]);
 
 var svg = d3.select(Fish.map.getPanes().overlayPane).append("svg"),
     g = svg.append("g").attr("class", "leaflet-zoom-hide");
-
-// var y = d3.scale.sqrt()
-//     .domain([0, 2700000])
-//     .range([0,325]);
-
-// var yAxis = d3.svg.axis()
-//     .scale(y)
-//     .tickValues(Fish.color.domain())
-//     .orient("right");
 
 Fish.draw_features = function() {
     var topology = Fish.topology;
@@ -124,12 +114,20 @@ Fish.draw_features = function() {
 
     Fish.features.on('mouseover', function(d) {
         var xPosition = d3.mouse(this)[0];
-        var yPosition = d3.mouse(this)[1] - 30;
+        var yPosition = d3.mouse(this)[1] - 10;
 
         g.append('text')
             .attr('id', 'tooltip')
-            .attr('x', xPosition)
-            .attr('y', yPosition)
+            .attr('x', function() {
+                if (xPosition < 400) {
+                    return xPosition + 40; }
+                else if (xPosition < 420) {
+                    return xPosition + 20; }
+                else {
+                    return xPosition }})
+            .attr('y', function() {
+                if (yPosition < 210) { return yPosition + 30 } else {
+                    return yPosition -10 }})
             .attr('text-anchor', 'middle')
             .text(d.properties.town);
 
