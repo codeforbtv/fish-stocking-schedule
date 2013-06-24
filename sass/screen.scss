@@ -108,9 +108,30 @@ path {
 
     h2 {
         margin-top: 0;
+        line-height: 0.9em;
     }
 
     h3 {
         font-weight: normal;
+        line-height: 1em;
     }
+}
+
+.navbar .brand {
+    float: none;
+    display: inline;
+}
+
+#attribution {
+    display: inline;
+    font-size: 16px;
+    float: right;
+}
+
+#vpr-logo {
+    padding-top: 5px;
+}
+
+.navbar-inner {
+    height: 40px;
 }
