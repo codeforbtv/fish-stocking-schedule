@@ -123,6 +123,8 @@ Fish.draw_features = function() {
                     return xPosition + 40; }
                 else if (xPosition < 420) {
                     return xPosition + 20; }
+                else if (xPosition > 650) {
+                    return xPosition - 20; }
                 else {
                     return xPosition }})
             .attr('y', function() {
